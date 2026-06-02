@@ -8,8 +8,14 @@
       "lng": -5.5234
     },
     "category": "seafood",
-    "badges": ["sus"],
-    "tags": ["langoustines", "creel-caught", "single-boat"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "langoustines",
+      "creel-caught",
+      "single-boat"
+    ],
     "sustainabilityMethod": "Hand-pulled creel fishing",
     "keyFacts": [
       "Single-handed operation from one small boat, Freya",
@@ -34,7 +40,14 @@
       "phone": "",
       "email": ""
     },
-    "season": [3, 4, 5, 6, 7, 8],
+    "season": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
     "visitable": true,
     "delivery": true,
     "wholesale": false,
@@ -46,12 +59,18 @@
     "name": "Strangford Lough Oysters",
     "location": {
       "label": "Strangford Lough",
-      "lat": 54.4200,
-      "lng": -5.5800
+      "lat": 54.42,
+      "lng": -5.58
     },
     "category": "seafood",
-    "badges": ["sus"],
-    "tags": ["oysters", "rope-grown", "aquaculture"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "oysters",
+      "rope-grown",
+      "aquaculture"
+    ],
     "sustainabilityMethod": "Rope-grown aquaculture in a protected marine site",
     "keyFacts": [
       "Grown in a designated European Marine Site and Special Area of Conservation",
@@ -77,7 +96,15 @@
       "phone": "",
       "email": ""
     },
-    "season": [4, 5, 6, 7, 8, 9, 10],
+    "season": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
     "visitable": false,
     "delivery": false,
     "wholesale": true,
@@ -93,8 +120,15 @@
       "lng": -5.4383
     },
     "category": "seafood",
-    "badges": ["pgi"],
-    "tags": ["prawns", "PGI-protected", "Nephrops", "harbour"],
+    "badges": [
+      "pgi"
+    ],
+    "tags": [
+      "prawns",
+      "PGI-protected",
+      "Nephrops",
+      "harbour"
+    ],
     "sustainabilityMethod": "Trawl-caught, Irish Sea, PGI-protected fishery",
     "keyFacts": [
       "Protected Geographical Indication — one of very few PGI-protected fresh seafood products in the UK",
@@ -119,7 +153,14 @@
       "phone": "",
       "email": ""
     },
-    "season": [4, 5, 6, 7, 8, 9],
+    "season": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
     "visitable": true,
     "delivery": false,
     "wholesale": true,
@@ -131,12 +172,19 @@
     "name": "Kilkeel Fishing Industry",
     "location": {
       "label": "Kilkeel Harbour, foot of the Mournes",
-      "lat": 54.0600,
+      "lat": 54.06,
       "lng": -5.9983
     },
     "category": "seafood",
-    "badges": ["sus"],
-    "tags": ["MSC", "mixed catch", "Mournes", "fleet"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "MSC",
+      "mixed catch",
+      "Mournes",
+      "fleet"
+    ],
     "sustainabilityMethod": "Mixed fleet with progressive MSC certification and low-bycatch gear adoption",
     "keyFacts": [
       "Northern Ireland's largest fishing port by volume",
@@ -162,7 +210,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
     "delivery": false,
     "wholesale": true,
@@ -179,7 +240,12 @@
     },
     "category": "dairy",
     "badges": [],
-    "tags": ["hand-churned", "Lagan Valley", "artisan", "butter"],
+    "tags": [
+      "hand-churned",
+      "Lagan Valley",
+      "artisan",
+      "butter"
+    ],
     "sustainabilityMethod": "Hand-churned, single-farm cream — minimal processing, no industrial inputs",
     "keyFacts": [
       "The only producers in Ireland making butter entirely by hand",
@@ -205,7 +271,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": false,
     "delivery": true,
     "wholesale": true,
@@ -222,7 +301,12 @@
     },
     "category": "dairy",
     "badges": [],
-    "tags": ["sixth-generation", "lough-shore", "veg boxes", "farm shop"],
+    "tags": [
+      "sixth-generation",
+      "lough-shore",
+      "veg boxes",
+      "farm shop"
+    ],
     "sustainabilityMethod": "Mixed farm, field-to-fork, tree planting and minimal packaging",
     "keyFacts": [
       "Sixth-generation family farm, farming the lough shore since 1889",
@@ -248,7 +332,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
     "delivery": true,
     "wholesale": false,
@@ -265,7 +362,13 @@
     },
     "category": "spirits",
     "badges": [],
-    "tags": ["whiskey", "gin", "field-to-bottle", "Jawbox", "Dunville's"],
+    "tags": [
+      "whiskey",
+      "gin",
+      "field-to-bottle",
+      "Jawbox",
+      "Dunville's"
+    ],
     "sustainabilityMethod": "Field-to-bottle — grain grown, milled and distilled on a single estate",
     "keyFacts": [
       "One of the first new whiskey distilleries to open in Ireland in over a century",
@@ -291,7 +394,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
     "delivery": true,
     "wholesale": true,
@@ -303,12 +419,18 @@
     "name": "Copeland Distillery",
     "location": {
       "label": "Donaghadee, North Ards",
-      "lat": 54.6400,
+      "lat": 54.64,
       "lng": -5.5317
     },
     "category": "spirits",
     "badges": [],
-    "tags": ["craft", "Copeland Islands", "whiskey", "rum", "vodka"],
+    "tags": [
+      "craft",
+      "Copeland Islands",
+      "whiskey",
+      "rum",
+      "vodka"
+    ],
     "sustainabilityMethod": "Small-batch craft distilling with strong local provenance",
     "keyFacts": [
       "Named for the Copeland Islands off the Down coast near Donaghadee",
@@ -333,7 +455,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
     "delivery": true,
     "wholesale": true,
@@ -345,12 +480,19 @@
     "name": "Comber Farmers' Market",
     "location": {
       "label": "Comber Town Square, Ards Peninsula",
-      "lat": 54.5500,
+      "lat": 54.55,
       "lng": -5.7417
     },
     "category": "veg",
-    "badges": ["pgi"],
-    "tags": ["Comber Earlies", "PGI-protected", "farmers market", "new potatoes"],
+    "badges": [
+      "pgi"
+    ],
+    "tags": [
+      "Comber Earlies",
+      "PGI-protected",
+      "farmers market",
+      "new potatoes"
+    ],
     "sustainabilityMethod": "Farmers' market connecting local growers directly with consumers",
     "keyFacts": [
       "Home of the Comber Earlies — PGI-protected new potatoes unique to this area",
@@ -376,7 +518,14 @@
       "phone": "",
       "email": ""
     },
-    "season": [4, 5, 6, 7, 8, 9],
+    "season": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
     "visitable": true,
     "delivery": false,
     "wholesale": false,
@@ -392,8 +541,16 @@
       "lng": -5.7017
     },
     "category": "meat",
-    "badges": ["sus"],
-    "tags": ["venison", "wagyu", "nitrite-free", "Downpatrick", "deer"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "venison",
+      "wagyu",
+      "nitrite-free",
+      "Downpatrick",
+      "deer"
+    ],
     "sustainabilityMethod": "Artisan processing, estate-reared deer and cattle, nitrite-free production",
     "keyFacts": [
       "Pioneers of nitrite-free bacon — reformulated without preservatives now widely adopted across the industry",
@@ -419,7 +576,12 @@
       "phone": "",
       "email": ""
     },
-    "season": [8, 9, 10, 11],
+    "season": [
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": false,
     "delivery": false,
     "wholesale": true,
@@ -435,8 +597,15 @@
       "lng": -5.7183
     },
     "category": "veg",
-    "badges": ["sus"],
-    "tags": ["certified organic", "veg boxes", "farm shop", "Belfast Lough"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "certified organic",
+      "veg boxes",
+      "farm shop",
+      "Belfast Lough"
+    ],
     "sustainabilityMethod": "Fully certified organic horticulture — no pesticides, no herbicides, closed fertility loop",
     "keyFacts": [
       "Established in 1991 by John McCormick — one of Northern Ireland's organic pioneers",
@@ -463,7 +632,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
     "delivery": true,
     "wholesale": false,
@@ -475,12 +657,20 @@
     "name": "Laurelbank Farm",
     "location": {
       "label": "Saintfield, County Down",
-      "lat": 54.4750,
+      "lat": 54.475,
       "lng": -5.9917
     },
     "category": "veg",
-    "badges": ["sus"],
-    "tags": ["organic", "CSA", "community supported agriculture", "regenerative", "edible flowers"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "organic",
+      "CSA",
+      "community supported agriculture",
+      "regenerative",
+      "edible flowers"
+    ],
     "sustainabilityMethod": "Regenerative organic smallholding with Community Supported Agriculture scheme",
     "keyFacts": [
       "7-acre organic smallholding just outside Saintfield in County Down",
@@ -507,7 +697,16 @@
       "phone": "",
       "email": ""
     },
-    "season": [3, 4, 5, 6, 7, 8, 9, 10],
+    "season": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
     "visitable": true,
     "delivery": false,
     "wholesale": false,
@@ -519,12 +718,20 @@
     "name": "Ballystockart Honey",
     "location": {
       "label": "Comber & Murlough (Dundrum), County Down",
-      "lat": 54.5500,
-      "lng": -5.7200
+      "lat": 54.55,
+      "lng": -5.72
     },
     "category": "honey",
-    "badges": ["sus"],
-    "tags": ["raw honey", "beeswax", "Comber", "Murlough", "direct sales"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "raw honey",
+      "beeswax",
+      "Comber",
+      "Murlough",
+      "direct sales"
+    ],
     "sustainabilityMethod": "Small-scale apiary beekeeping — two hives, direct to consumer, beeswax repurposed for plastic-free wraps",
     "keyFacts": [
       "Family operation — Valerie, Frank and Finn McMullan",
@@ -550,7 +757,14 @@
       "phone": "",
       "email": ""
     },
-    "season": [5, 6, 7, 8, 9, 10],
+    "season": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
     "visitable": false,
     "delivery": false,
     "wholesale": false,
@@ -566,8 +780,17 @@
       "lng": -5.5717
     },
     "category": "honey",
-    "badges": ["sus"],
-    "tags": ["native Irish black bee", "conservation", "raw honey", "beeswax", "skincare", "Ards Peninsula"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "native Irish black bee",
+      "conservation",
+      "raw honey",
+      "beeswax",
+      "skincare",
+      "Ards Peninsula"
+    ],
     "sustainabilityMethod": "Conservation-focused beekeeping — protecting and breeding the native Irish black bee across the Ards Peninsula",
     "keyFacts": [
       "Established 2004 by Valentine and Chris at Loughshore Apiary, Greyabbey",
@@ -593,7 +816,14 @@
       "phone": "",
       "email": ""
     },
-    "season": [5, 6, 7, 8, 9, 10],
+    "season": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
     "visitable": false,
     "delivery": true,
     "wholesale": false,
@@ -606,11 +836,19 @@
     "location": {
       "label": "Killinchy, Strangford Lough shore",
       "lat": 54.4833,
-      "lng": -5.6600
+      "lng": -5.66
     },
     "category": "honey",
-    "badges": ["sus"],
-    "tags": ["raw honey", "native Irish bees", "Great Taste Award", "Killinchy", "unpasteurised"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "raw honey",
+      "native Irish bees",
+      "Great Taste Award",
+      "Killinchy",
+      "unpasteurised"
+    ],
     "sustainabilityMethod": "Native Irish honeybee keeping — unpasteurised, minimally filtered, single-area honey",
     "keyFacts": [
       "Great Taste Award winner 2025 — one star",
@@ -636,7 +874,14 @@
       "phone": "",
       "email": ""
     },
-    "season": [5, 6, 7, 8, 9, 10],
+    "season": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
     "visitable": false,
     "delivery": true,
     "wholesale": false,
@@ -649,11 +894,19 @@
     "location": {
       "label": "Hillsborough, County Down",
       "lat": 54.4617,
-      "lng": -6.0850
+      "lng": -6.085
     },
     "category": "honey",
-    "badges": ["sus"],
-    "tags": ["raw honey", "cut comb", "unprocessed", "Hillsborough", "award-winning"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "raw honey",
+      "cut comb",
+      "unprocessed",
+      "Hillsborough",
+      "award-winning"
+    ],
     "sustainabilityMethod": "Small apiary beekeeping — unprocessed, unheated, unblended honey from BT26 hives",
     "keyFacts": [
       "All honey from hives kept exclusively in the BT26 (Hillsborough) area",
@@ -679,7 +932,14 @@
       "phone": "",
       "email": ""
     },
-    "season": [5, 6, 7, 8, 9, 10],
+    "season": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
     "visitable": false,
     "delivery": false,
     "wholesale": false,
@@ -691,12 +951,21 @@
     "name": "Michael Young MBE — Hillsborough Honey",
     "location": {
       "label": "Royal Hillsborough, County Down",
-      "lat": 54.4600,
+      "lat": 54.46,
       "lng": -6.0833
     },
     "category": "honey",
-    "badges": ["sus"],
-    "tags": ["raw honey", "comb honey", "bee pollen", "mead", "Hillsborough", "INIB"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "raw honey",
+      "comb honey",
+      "bee pollen",
+      "mead",
+      "Hillsborough",
+      "INIB"
+    ],
     "sustainabilityMethod": "Expert small-scale apiary beekeeping — natural honey, comb honey and bee pollen from Hillsborough hives",
     "keyFacts": [
       "MBE awarded in 2009 for voluntary services to beekeeping",
@@ -722,7 +991,14 @@
       "phone": "",
       "email": ""
     },
-    "season": [5, 6, 7, 8, 9, 10],
+    "season": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
     "visitable": false,
     "delivery": false,
     "wholesale": false,
@@ -739,7 +1015,13 @@
     },
     "category": "bakery",
     "badges": [],
-    "tags": ["wheaten bread", "soda bread", "fruit bannock", "traditional", "Mournes"],
+    "tags": [
+      "wheaten bread",
+      "soda bread",
+      "fruit bannock",
+      "traditional",
+      "Mournes"
+    ],
     "sustainabilityMethod": "Traditional craft baking — unchanged family recipes, local ingredients, three generations of knowledge",
     "keyFacts": [
       "Family-owned craft bakery since 1965, now in its third generation",
@@ -765,7 +1047,20 @@
       "phone": "+442843722427",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
     "delivery": false,
     "wholesale": true,
@@ -782,7 +1077,14 @@
     },
     "category": "bakery",
     "badges": [],
-    "tags": ["wheaten bread", "soda bread", "fruit loaf", "Great Taste Award", "traditional", "Bangor"],
+    "tags": [
+      "wheaten bread",
+      "soda bread",
+      "fruit loaf",
+      "Great Taste Award",
+      "traditional",
+      "Bangor"
+    ],
     "sustainabilityMethod": "Traditional Northern Irish craft baking with natural local ingredients — no industrial shortcuts",
     "keyFacts": [
       "Established 1937 — owned by Paul and Patricia Getty since 1990",
@@ -809,7 +1111,20 @@
       "phone": "+442891453157",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
     "delivery": false,
     "wholesale": true,
@@ -825,8 +1140,16 @@
       "lng": -5.6732
     },
     "category": "bakery",
-    "badges": ["sus"],
-    "tags": ["sourdough", "real bread", "wild yeast", "Bangor", "micro-bakery"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "sourdough",
+      "real bread",
+      "wild yeast",
+      "Bangor",
+      "micro-bakery"
+    ],
     "sustainabilityMethod": "Real sourdough — flour, water and salt only. Wild yeast starter, no additives, no shortcuts",
     "keyFacts": [
       "Sean Kelly's sourdough micro-bakery based in Bangor",
@@ -852,7 +1175,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
     "delivery": false,
     "wholesale": true,
@@ -869,7 +1205,13 @@
     },
     "category": "bakery",
     "badges": [],
-    "tags": ["artisan", "family bakery", "Newtownards", "handcrafted", "traditional"],
+    "tags": [
+      "artisan",
+      "family bakery",
+      "Newtownards",
+      "handcrafted",
+      "traditional"
+    ],
     "sustainabilityMethod": "Father-to-son artisan baking — everything prepared fresh on-site daily using local ingredients",
     "keyFacts": [
       "24 years on the High Street in Newtownards",
@@ -895,7 +1237,20 @@
       "phone": "+442891823699",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
     "delivery": false,
     "wholesale": false,
@@ -911,8 +1266,18 @@
       "lng": -5.9397
     },
     "category": "beer",
-    "badges": ["sus"],
-    "tags": ["craft beer", "ale", "stout", "lager", "Mournes", "family farm", "taproom"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "craft beer",
+      "ale",
+      "stout",
+      "lager",
+      "Mournes",
+      "family farm",
+      "taproom"
+    ],
     "sustainabilityMethod": "Fifth-generation family farm brewery — local ingredients, mountain water, independent production",
     "keyFacts": [
       "Founded 1996 on a 5th generation family farm on the banks of the Whitewater river",
@@ -938,7 +1303,20 @@
       "phone": "+442843778900",
       "email": "info@whitewaterbrewery.com"
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
     "delivery": true,
     "wholesale": true,
@@ -954,8 +1332,18 @@
       "lng": -6.2519
     },
     "category": "beer",
-    "badges": ["sus"],
-    "tags": ["craft beer", "IPA", "pilsner", "stout", "Mournes", "vegan", "small batch"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "craft beer",
+      "IPA",
+      "pilsner",
+      "stout",
+      "Mournes",
+      "vegan",
+      "small batch"
+    ],
     "sustainabilityMethod": "Independent microbrewery — Irish base malts, house-cultivated yeast, Mourne mountain water",
     "keyFacts": [
       "Founded 2015, inspired by a passion for craft brewing",
@@ -982,7 +1370,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": false,
     "delivery": true,
     "wholesale": true,
@@ -998,8 +1399,17 @@
       "lng": -5.6918
     },
     "category": "seaweed",
-    "badges": ["sus"],
-    "tags": ["kelp", "dulse", "seaweed", "hand-harvested", "Strangford Lough", "diving"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "kelp",
+      "dulse",
+      "seaweed",
+      "hand-harvested",
+      "Strangford Lough",
+      "diving"
+    ],
     "sustainabilityMethod": "Hand-dived seaweed harvesting under Crown Estate licence — rotational cropping, no machinery",
     "keyFacts": [
       "Founded 2019 by Andrea and Graham Gannon — he is a commercial diver, she drives product development",
@@ -1026,7 +1436,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": false,
     "delivery": true,
     "wholesale": true,
@@ -1039,11 +1462,20 @@
     "location": {
       "label": "Newtownards, County Down",
       "lat": 54.5927,
-      "lng": -5.6910
+      "lng": -5.691
     },
     "category": "cheese",
-    "badges": ["sus"],
-    "tags": ["raw milk", "blue cheese", "Young Buck", "Newtownards", "artisan", "award-winning"],
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "raw milk",
+      "blue cheese",
+      "Young Buck",
+      "Newtownards",
+      "artisan",
+      "award-winning"
+    ],
     "sustainabilityMethod": "Small-batch raw milk cheesemaking — single herd sourcing, hand-ladled, traditional methods",
     "keyFacts": [
       "Young Buck: Northern Ireland's first and only raw milk blue cheese, launched November 2013",
@@ -1070,7 +1502,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": false,
     "delivery": true,
     "wholesale": true,
@@ -1082,12 +1527,18 @@
     "name": "Leggygowan Farm",
     "location": {
       "label": "Saintfield, County Down",
-      "lat": 54.4750,
-      "lng": -5.9900
+      "lat": 54.475,
+      "lng": -5.99
     },
     "category": "cheese",
     "badges": [],
-    "tags": ["goat cheese", "blue cheese", "farmhouse", "Saintfield", "artisan"],
+    "tags": [
+      "goat cheese",
+      "blue cheese",
+      "farmhouse",
+      "Saintfield",
+      "artisan"
+    ],
     "sustainabilityMethod": "Single-farm goat's cheese — milk from own 100-strong pedigree herd, handcrafted on the 20-acre farm",
     "keyFacts": [
       "Established 2010 by brothers Adam, Ryan and Jason Kelly as a farm diversification project",
@@ -1113,7 +1564,20 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": false,
     "delivery": false,
     "wholesale": true,
@@ -1126,11 +1590,18 @@
     "location": {
       "label": "Killinchy, Strangford Lough shore",
       "lat": 54.4833,
-      "lng": -5.6550
+      "lng": -5.655
     },
     "category": "fruit",
     "badges": [],
-    "tags": ["soft fruit", "PYO", "raspberries", "blackcurrants", "Killinchy", "lough shore"],
+    "tags": [
+      "soft fruit",
+      "PYO",
+      "raspberries",
+      "blackcurrants",
+      "Killinchy",
+      "lough shore"
+    ],
     "sustainabilityMethod": "Pick-your-own soft fruit — direct from grower, zero food miles, seasonal harvest",
     "keyFacts": [
       "Family-run soft fruit farm established 2011 at Killinchy on the Strangford Lough shore",
@@ -1156,7 +1627,12 @@
       "phone": "+442897541221",
       "email": "info@finlaysplace.co.uk"
     },
-    "season": [5, 6, 7, 8],
+    "season": [
+      5,
+      6,
+      7,
+      8
+    ],
     "visitable": true,
     "delivery": false,
     "wholesale": false,
@@ -1173,7 +1649,15 @@
     },
     "category": "beer",
     "badges": [],
-    "tags": ["craft beer", "oldest brewery", "Irish red ale", "pale ale", "Georgian", "Lisburn", "taproom"],
+    "tags": [
+      "craft beer",
+      "oldest brewery",
+      "Irish red ale",
+      "pale ale",
+      "Georgian",
+      "Lisburn",
+      "taproom"
+    ],
     "sustainabilityMethod": "Independent family brewery — over 40 years of craft production in a historic Georgian setting",
     "keyFacts": [
       "Founded 1981 — the oldest independent brewery on the island of Ireland",
@@ -1200,8 +1684,89 @@
       "phone": "",
       "email": ""
     },
-    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
     "visitable": true,
+    "delivery": true,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
+  },
+  {
+    "id": 29,
+    "name": "SporeShore Mushrooms",
+    "location": {
+      "label": "Ballywalter, Ards Peninsula",
+      "lat": 54.5358,
+      "lng": -5.4861
+    },
+    "category": "mushroom",
+    "badges": [
+      "sus"
+    ],
+    "tags": [
+      "functional mushrooms",
+      "Lion's Mane",
+      "Reishi",
+      "Chaga",
+      "Cordyceps",
+      "Turkey Tail",
+      "tinctures",
+      "Ards Peninsula"
+    ],
+    "sustainabilityMethod": "Small-scale mushroom cultivation on the Ards Peninsula — grown on sawdust and soy hulls, processed locally into extracts, powders and tinctures.",
+    "keyFacts": [
+      "Based at 58 Main Street, Ballywalter, on the Ards Peninsula coast",
+      "Specialises in functional mushrooms: Cordyceps, Lion's Mane, Turkey Tail, Chaga, Reishi",
+      "Products include dual-extracted tinctures, dried mushrooms, powders and seasonings",
+      "Signature product: 'Shroom Juice'",
+      "Sells grow kits — fully colonised sawdust and soy hulls for home cultivation",
+      "Stallholder at St George's Market, Belfast (Friday, Saturday, Sunday)"
+    ],
+    "sustainabilityStory": "A small mushroom farm on the shore of the Ards Peninsula — growing functional mushrooms that until recently weren't being produced in Northern Ireland at all. SporeShore turns sawdust and soy hulls into Lion's Mane, Reishi and Cordyceps, then processes them locally into extracts and powders. A new kind of Ulster producer working at the intersection of food, wellness and traditional medicine.",
+    "brandVoice": "Quiet, curious, slightly off the beaten path. Functional mushrooms are a relatively new conversation in Irish food — SporeShore are early to it. Treat them as pioneers rather than wellness merchants. The shore-side location and the name itself give the brand a distinct place identity.",
+    "contentIdeas": [
+      "What is a functional mushroom? — a beginner's guide via SporeShore on the Ards coast",
+      "From sawdust to tincture — the full cycle of a Lion's Mane mushroom in County Down",
+      "Saturday morning at St George's — meeting the SporeShore stall"
+    ],
+    "whereToBuy": {
+      "label": "sporeshore.co.uk · St George's Market, Belfast (Fri/Sat/Sun)",
+      "url": "https://www.sporeshore.co.uk"
+    },
+    "contact": {
+      "website": "https://www.sporeshore.co.uk",
+      "instagram": "@sporeshore",
+      "phone": "",
+      "email": ""
+    },
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "visitable": false,
     "delivery": true,
     "wholesale": true,
     "priceRange": "££",
