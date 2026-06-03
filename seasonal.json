@@ -83,11 +83,11 @@
     "id": 9,
     "name": "Strawberries",
     "category": "fruit",
-    "peak": [5, 6],
-    "season": [5, 6, 7],
-    "story": "Soft fruit season at Finlay's Place and the County Down growers. Eat them warm from the sun, the day they're picked. Nothing in any supermarket comes close.",
+    "peak": [6, 7],
+    "season": [5, 6, 7, 8],
+    "story": "The County Down soft fruit season runs through summer with the peak in July. Finlay's Place opens for pick-your-own — eat them warm from the sun, the day they're picked. Nothing in any supermarket comes close.",
     "producerIds": [27],
-    "tags": ["soft fruit", "PYO"]
+    "tags": ["soft fruit", "PYO", "summer"]
   },
   {
     "id": 10,
