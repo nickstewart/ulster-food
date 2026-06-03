@@ -266,6 +266,32 @@
   .year-cell.current { outline: 2px solid var(--ember); outline-offset: 1px; z-index: 1; }
   .year-row .foraged-badge { font-size: 9px; padding: 1px 5px; }
 
+  /* Festivals — Now view cards */
+  .festival-section .season-section-hdr { color: var(--ember); }
+  .festival-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 16px;
+    border-left: 4px solid var(--ember); transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .festival-card.has-link { cursor: pointer; }
+  .festival-card.has-link:hover { box-shadow: 0 2px 8px rgba(196,98,45,0.12); }
+  .festival-name { font-family: 'Lora', serif; font-size: 14px; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
+  .festival-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 11.5px; color: var(--mid-grey); margin-bottom: 8px; }
+  .festival-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .festival-meta i { font-size: 13px; }
+  .festival-body { font-size: 12.5px; color: #5A6A6E; line-height: 1.6; }
+  .festival-link { font-size: 11.5px; color: var(--ember); font-weight: 500; margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); display: flex; align-items: center; gap: 4px; }
+  .festival-link i { font-size: 13px; }
+
+  /* Festivals — Year view rows */
+  .year-row.festival { background: #FEF8F4; }
+  .year-row.festival .year-cell.season,
+  .year-row.festival .year-cell.peak { background: var(--ember); }
+  .year-row.festival .year-cell.season { background: #F0B58E; }
+  .festival-badge { display: inline-flex; align-items: center; gap: 3px; background: var(--ember-lt); color: #8B3A00; border-radius: 4px; padding: 2px 7px; font-size: 10px; font-weight: 600; font-family: 'Inter', sans-serif; letter-spacing: 0.04em; text-transform: uppercase; margin-left: 8px; vertical-align: middle; }
+  .festival-badge i { font-size: 11px; }
+  .year-row .festival-badge { font-size: 9px; padding: 1px 5px; }
+  .year-section-divider { padding: 14px 16px 6px; font-family: 'Lora', serif; font-size: 11px; font-weight: 600; color: var(--mid-grey); letter-spacing: 0.08em; text-transform: uppercase; border-top: 1px solid var(--border); background: #FAFAF9; }
+
   /* ── INSTALL BANNER ── */
   .install-banner {
     display: none;
@@ -476,6 +502,7 @@
         <button class="pill active" onclick="setSeasonFilter('all', this)">Everything</button>
         <button class="pill" onclick="setSeasonFilter('producer', this)"><i class="ti ti-shovel" aria-hidden="true"></i> Producers</button>
         <button class="pill" onclick="setSeasonFilter('wild', this)"><i class="ti ti-plant" aria-hidden="true"></i> Wild &amp; foraged</button>
+        <button class="pill" onclick="setSeasonFilter('festivals', this)"><i class="ti ti-confetti" aria-hidden="true"></i> Festivals</button>
       </div>
     </div>
     <div id="seasonContent" aria-live="polite"></div>
@@ -502,14 +529,17 @@
 let PRODUCERS = [];
 
 let SEASONAL  = [];
+let FESTIVALS = [];
 
 async function loadProducers() {
-  const [pRes, sRes] = await Promise.all([
+  const [pRes, sRes, fRes] = await Promise.all([
     fetch('producers.json'),
     fetch('seasonal.json'),
+    fetch('festivals.json'),
   ]);
   const data       = await pRes.json();
   const seasonData = await sRes.json();
+  const festData   = await fRes.json();
   PRODUCERS  = data.map(p => ({
     id:     p.id,
     name:   p.name,
@@ -523,7 +553,8 @@ async function loadProducers() {
     badges: p.badges,
     tags:   p.tags || [],
   }));
-  SEASONAL = seasonData;
+  SEASONAL  = seasonData;
+  FESTIVALS = festData;
   renderGrid();
   renderSeason();
   restoreTabFromHash();
@@ -650,23 +681,29 @@ function renderSeason() {
   const container = document.getElementById('seasonContent');
   const currentMonth = new Date().getMonth();
 
-  const entries = SEASONAL.filter(e => {
+  const showProduce  = seasonFilter !== 'festivals';
+  const showFests    = seasonFilter === 'all' || seasonFilter === 'festivals';
+
+  const produceEntries = SEASONAL.filter(e => {
     if (seasonFilter === 'wild')     return !!e.foraged;
     if (seasonFilter === 'producer') return !e.foraged;
+    if (seasonFilter === 'festivals') return false;
     return true;
   });
 
-  if (!entries.length) {
+  const festivalEntries = showFests ? FESTIVALS : [];
+
+  if (!produceEntries.length && !festivalEntries.length) {
     container.innerHTML = `<div class="no-results"><i class="ti ti-mood-empty" style="font-size:32px;display:block;margin-bottom:8px;"></i>Nothing in this view right now — try another filter.</div>`;
     return;
   }
 
   container.innerHTML = seasonView === 'year'
-    ? renderYearView(entries, currentMonth)
-    : renderNowView(entries, currentMonth);
+    ? renderYearView(produceEntries, festivalEntries, currentMonth)
+    : renderNowView(produceEntries, festivalEntries, currentMonth);
 }
 
-function renderNowView(entries, currentMonth) {
+function renderNowView(entries, festivals, currentMonth) {
   const grouped = { peak: [], soon: [], later: [] };
   entries.forEach(e => grouped[classifyEntry(e, currentMonth)].push(e));
 
@@ -682,7 +719,7 @@ function renderNowView(entries, currentMonth) {
     { key: 'later', label: 'Later in the year',  icon: 'ti-calendar' },
   ];
 
-  return sections.filter(s => grouped[s.key].length).map(s => {
+  const produceHtml = sections.filter(s => grouped[s.key].length).map(s => {
     const cards = grouped[s.key].map(e => renderSeasonCard(e, s.key, currentMonth)).join('');
     return `
       <section class="season-section ${s.key}">
@@ -691,6 +728,71 @@ function renderNowView(entries, currentMonth) {
       </section>
     `;
   }).join('');
+
+  const festivalHtml = renderFestivalSection(festivals, currentMonth);
+  return produceHtml + festivalHtml;
+}
+
+function festivalStatus(festival, currentMonth) {
+  // 'now' if any of its months is the current month
+  if (festival.months.includes(currentMonth)) return 'now';
+  // 'soon' if within next 3 months
+  for (const m of festival.months) {
+    const dist = (m - currentMonth + 12) % 12;
+    if (dist > 0 && dist <= 3) return 'soon';
+  }
+  return 'later';
+}
+
+function festivalMonthsUntil(festival, currentMonth) {
+  let min = 12;
+  for (const m of festival.months) {
+    const dist = (m - currentMonth + 12) % 12;
+    if (dist < min) min = dist;
+  }
+  return min;
+}
+
+function renderFestivalSection(festivals, currentMonth) {
+  if (!festivals.length) return '';
+  // Sort: happening now first, then by how soon
+  const sorted = [...festivals].sort((a, b) => {
+    const aNow = a.months.includes(currentMonth) ? -1 : festivalMonthsUntil(a, currentMonth);
+    const bNow = b.months.includes(currentMonth) ? -1 : festivalMonthsUntil(b, currentMonth);
+    if (aNow !== bNow) return aNow - bNow;
+    return a.name.localeCompare(b.name);
+  });
+  // Show the next 6 upcoming + any current
+  const upcoming = sorted.slice(0, 6);
+  const cards = upcoming.map(f => renderFestivalCard(f, currentMonth)).join('');
+  return `
+    <section class="season-section festival-section">
+      <h3 class="season-section-hdr"><i class="ti ti-confetti" aria-hidden="true"></i>Festivals coming up</h3>
+      <div class="season-grid">${cards}</div>
+    </section>
+  `;
+}
+
+function renderFestivalCard(festival, currentMonth) {
+  const producer = festival.linkedProducerIds && festival.linkedProducerIds.length
+    ? PRODUCERS.find(p => p.id === festival.linkedProducerIds[0])
+    : null;
+  const hasLink = !!producer;
+  const onclick = hasLink ? `onclick="openProducerFromSeason(${producer.id})"` : '';
+  const link = producer
+    ? `<div class="festival-link"><i class="ti ti-arrow-right" aria-hidden="true"></i>${producer.name}</div>`
+    : '';
+  return `
+    <article class="festival-card${hasLink ? ' has-link' : ''}" ${onclick}>
+      <div class="festival-name">${festival.name}</div>
+      <div class="festival-meta">
+        <span><i class="ti ti-calendar" aria-hidden="true"></i>${festival.dates}</span>
+        <span><i class="ti ti-map-pin" aria-hidden="true"></i>${festival.location.label}</span>
+      </div>
+      <div class="festival-body">${festival.story}</div>
+      ${link}
+    </article>
+  `;
 }
 
 function renderSeasonCard(entry, status, currentMonth) {
@@ -741,12 +843,20 @@ function renderMiniBar(entry, currentMonth) {
   `;
 }
 
-function renderYearView(entries, currentMonth) {
-  // Sort: peak-now first, then by how soon the next peak starts
-  const sorted = [...entries].sort((a, b) => {
+function renderYearView(entries, festivals, currentMonth) {
+  // Sort produce: peak-now first, then by how soon the next peak starts
+  const sortedProduce = [...entries].sort((a, b) => {
     const aPeak = a.peak.includes(currentMonth) ? -1 : monthsUntilPeak(a.peak, currentMonth);
     const bPeak = b.peak.includes(currentMonth) ? -1 : monthsUntilPeak(b.peak, currentMonth);
     if (aPeak !== bPeak) return aPeak - bPeak;
+    return a.name.localeCompare(b.name);
+  });
+
+  // Sort festivals: happening now first, then by how soon
+  const sortedFests = [...festivals].sort((a, b) => {
+    const aNow = a.months.includes(currentMonth) ? -1 : festivalMonthsUntil(a, currentMonth);
+    const bNow = b.months.includes(currentMonth) ? -1 : festivalMonthsUntil(b, currentMonth);
+    if (aNow !== bNow) return aNow - bNow;
     return a.name.localeCompare(b.name);
   });
 
@@ -754,7 +864,7 @@ function renderYearView(entries, currentMonth) {
     `<span class="${i === currentMonth ? 'current' : ''}" title="${MONTH_NAMES[i]}">${m}</span>`
   ).join('');
 
-  const rows = sorted.map(e => {
+  const produceRows = sortedProduce.map(e => {
     const producer = e.producerIds.length ? PRODUCERS.find(p => p.id === e.producerIds[0]) : null;
     const hasLink = !!producer;
     const onclick = hasLink ? `onclick="openProducerFromSeason(${producer.id})"` : '';
@@ -772,13 +882,46 @@ function renderYearView(entries, currentMonth) {
     `;
   }).join('');
 
+  const festivalRows = sortedFests.map(f => {
+    const producer = f.linkedProducerIds && f.linkedProducerIds.length
+      ? PRODUCERS.find(p => p.id === f.linkedProducerIds[0])
+      : null;
+    const hasLink = !!producer;
+    const onclick = hasLink ? `onclick="openProducerFromSeason(${producer.id})"` : '';
+    const cells = MONTH_LETTERS.map((_, i) => {
+      const isMonth   = f.months.includes(i);
+      const isCurrent = i === currentMonth && isMonth;
+      const cls = ['year-cell'];
+      if (isMonth)   cls.push('peak');
+      if (isCurrent) cls.push('current');
+      return `<span class="${cls.join(' ')}" title="${MONTH_NAMES[i]}"></span>`;
+    }).join('');
+    return `
+      <div class="year-row festival${hasLink ? ' has-link' : ''}" ${onclick}>
+        <div class="year-row-name"><span class="name-text">${f.name}</span><span class="festival-badge"><i class="ti ti-confetti" aria-hidden="true"></i>Fest</span></div>
+        <div class="year-row-bar">${cells}</div>
+      </div>
+    `;
+  }).join('');
+
+  const produceBlock = sortedProduce.length ? `
+    <div class="year-section-divider">Produce</div>
+    ${produceRows}
+  ` : '';
+
+  const festivalBlock = sortedFests.length ? `
+    <div class="year-section-divider">Festivals</div>
+    ${festivalRows}
+  ` : '';
+
   return `
     <div class="year-view">
       <div class="year-header">
         <div class="year-header-spacer">The year</div>
         <div class="year-header-months">${headerMonths}</div>
       </div>
-      ${rows}
+      ${produceBlock}
+      ${festivalBlock}
     </div>
   `;
 }
