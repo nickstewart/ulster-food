@@ -296,6 +296,20 @@
   .year-row .festival-badge { font-size: 9px; padding: 1px 5px; }
   .year-section-divider { padding: 14px 16px 6px; font-family: 'Lora', serif; font-size: 11px; font-weight: 600; color: var(--mid-grey); letter-spacing: 0.08em; text-transform: uppercase; border-top: 1px solid var(--border); background: #FAFAF9; }
 
+  /* Calendar subscribe */
+  .calendar-subscribe { margin-top: 1.5rem; }
+  .calendar-subscribe-btn {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--lough); color: #E8F0EC; text-decoration: none;
+    border-radius: 12px; padding: 16px 20px;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .calendar-subscribe-btn:hover { background: var(--lough-dk); }
+  .calendar-subscribe-btn:active { transform: scale(0.99); }
+  .calendar-subscribe-btn > i { font-size: 28px; flex-shrink: 0; color: var(--ember); }
+  .calendar-subscribe-title { display: block; font-family: 'Lora', serif; font-size: 15px; font-weight: 600; color: #E8F0EC; margin-bottom: 2px; }
+  .calendar-subscribe-sub { display: block; font-size: 12px; color: #7A9EA0; line-height: 1.4; }
+
   /* ── INSTALL BANNER ── */
   .install-banner {
     display: none;
@@ -510,6 +524,15 @@
       </div>
     </div>
     <div id="seasonContent" aria-live="polite"></div>
+    <div class="calendar-subscribe">
+      <a href="webcal://ulster.food/calendar.ics" class="calendar-subscribe-btn">
+        <i class="ti ti-calendar-plus" aria-hidden="true"></i>
+        <span>
+          <span class="calendar-subscribe-title">Subscribe to the calendar</span>
+          <span class="calendar-subscribe-sub">Get every peak season and festival in your calendar app</span>
+        </span>
+      </a>
+    </div>
   </div>
 
 </main>
