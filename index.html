@@ -215,6 +215,16 @@
   .later .season-status { color: var(--mid-grey); }
   .season-name { font-family: 'Lora', serif; font-size: 14px; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
   .season-body { font-size: 12.5px; color: #5A6A6E; line-height: 1.6; }
+  .season-section { margin-bottom: 1.5rem; }
+  .season-section-hdr { font-family: 'Lora', serif; font-size: 13px; font-weight: 600; color: var(--mid-grey); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .season-section-hdr i { font-size: 14px; }
+  .season-section.peak .season-section-hdr { color: var(--grass); }
+  .season-section.soon .season-section-hdr { color: var(--ember); }
+  .season-card.has-link { cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; }
+  .season-card.has-link:hover { border-color: var(--sage); box-shadow: 0 2px 8px rgba(44,74,46,0.08); }
+  .season-producer-link { font-size: 11.5px; color: var(--lough); font-weight: 500; margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); display: flex; align-items: center; gap: 4px; }
+  .season-producer-link i { font-size: 13px; }
+  .season-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
 
   /* ── INSTALL BANNER ── */
   .install-banner {
@@ -410,61 +420,10 @@
       <i class="ti ti-calendar-event season-intro-icon" aria-hidden="true"></i>
       <div class="season-intro-text">
         <h2>What's on the lough and the land right now</h2>
-        <p>A living guide to the County Down food calendar — what's at peak, what's coming, and what to look forward to further down the year.</p>
+        <p>A living guide to the Ulster food calendar — what's at peak, what's coming, and what to look forward to further down the year. Tap any card to meet the producer.</p>
       </div>
     </div>
-    <div class="season-grid">
-      <div class="season-card peak">
-        <div class="season-status"><i class="ti ti-circle-filled" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Peak right now</div>
-        <div class="season-name">Strangford langoustines</div>
-        <div class="season-body">Spring creel season is in full swing. Firm, sweet, unstressed. From Graeme Hackworth at Kircubbin Harbour — pulled by hand from the lough floor.</div>
-      </div>
-      <div class="season-card peak">
-        <div class="season-status"><i class="ti ti-circle-filled" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Peak right now</div>
-        <div class="season-name">Rope-grown oysters</div>
-        <div class="season-body">Strangford Lough oysters are excellent May through September. Clean, briny, deeply flavoured by the lough's exceptional water quality.</div>
-      </div>
-      <div class="season-card peak">
-        <div class="season-status"><i class="ti ti-circle-filled" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Peak right now</div>
-        <div class="season-name">Abernethy spring butter</div>
-        <div class="season-body">Hand-churned from single-farm cream out of the Lagan Valley. Spring cream is the richest of the year — dulse and sea salt variety is the one to seek out.</div>
-      </div>
-      <div class="season-card soon">
-        <div class="season-status"><i class="ti ti-circle" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Coming soon</div>
-        <div class="season-name">Comber Earlies</div>
-        <div class="season-body">PGI-protected new potatoes, first of the season expected late May. Watch Millbank Farm and Comber Farmers' Market for the first deliveries.</div>
-      </div>
-      <div class="season-card soon">
-        <div class="season-status"><i class="ti ti-circle" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Coming soon</div>
-        <div class="season-name">Summer brown crab</div>
-        <div class="season-body">Creel-caught brown crab from the lough and the wider Down coast. Usually running well from June — exceptional when cooked on the harbour wall minutes after landing.</div>
-      </div>
-      <div class="season-card soon">
-        <div class="season-status"><i class="ti ti-circle" aria-hidden="true" style="font-size:8px;margin-right:4px;"></i>Coming soon</div>
-        <div class="season-name">Portavogie summer prawns</div>
-        <div class="season-body">The warmer months bring the best quality Nephrops from the Irish Sea off the Ards Peninsula. PGI-protected, landed at Portavogie harbour.</div>
-      </div>
-      <div class="season-card later">
-        <div class="season-status">Autumn</div>
-        <div class="season-name">Echlinville grain harvest</div>
-        <div class="season-body">Field-to-bottle whiskey and gin. Grain grown on the Ards Peninsula farm, harvested late summer, milled and distilled on site at Kircubbin.</div>
-      </div>
-      <div class="season-card later">
-        <div class="season-status">Autumn</div>
-        <div class="season-name">Finnebrogue venison</div>
-        <div class="season-body">Red deer from Finnebrogue Estate, Downpatrick. Best from October — pairs perfectly with late-season fire cooking as the evenings draw in.</div>
-      </div>
-      <div class="season-card later">
-        <div class="season-status">Autumn</div>
-        <div class="season-name">Crab season peak</div>
-        <div class="season-body">Brown and velvet crab season traditionally peaks in autumn. Kilkeel and the wider Down coast fleet lands significant volumes from September.</div>
-      </div>
-      <div class="season-card later">
-        <div class="season-status">Winter</div>
-        <div class="season-name">Winter creel fishing</div>
-        <div class="season-body">The quiet lough. Dramatic weather, low light, long tides. Some of the most atmospheric content of the year — and still excellent langoustines when conditions allow.</div>
-      </div>
-    </div>
+    <div id="seasonContent" aria-live="polite"></div>
   </div>
 
 </main>
@@ -487,9 +446,15 @@
 <script>
 let PRODUCERS = [];
 
+let SEASONAL  = [];
+
 async function loadProducers() {
-  const res  = await fetch('producers.json');
-  const data = await res.json();
+  const [pRes, sRes] = await Promise.all([
+    fetch('producers.json'),
+    fetch('seasonal.json'),
+  ]);
+  const data       = await pRes.json();
+  const seasonData = await sRes.json();
   PRODUCERS  = data.map(p => ({
     id:     p.id,
     name:   p.name,
@@ -503,7 +468,9 @@ async function loadProducers() {
     badges: p.badges,
     tags:   p.tags || [],
   }));
+  SEASONAL = seasonData;
   renderGrid();
+  renderSeason();
   restoreTabFromHash();
 }
 
@@ -586,6 +553,84 @@ function restoreTabFromHash() {
 }
 
 window.addEventListener('hashchange', restoreTabFromHash);
+
+// ── IN SEASON ─────────────────────────────────────────────────────
+function monthsUntilPeak(peakMonths, currentMonth) {
+  let min = 12;
+  for (const m of peakMonths) {
+    const dist = (m - currentMonth + 12) % 12;
+    if (dist < min) min = dist;
+  }
+  return min;
+}
+
+function classifyEntry(entry, currentMonth) {
+  if (entry.peak.includes(currentMonth)) return 'peak';
+  const dist = monthsUntilPeak(entry.peak, currentMonth);
+  if (dist > 0 && dist <= 3) return 'soon';
+  return 'later';
+}
+
+function renderSeason() {
+  const container = document.getElementById('seasonContent');
+  const now = new Date();
+  const currentMonth = now.getMonth();
+
+  const grouped = { peak: [], soon: [], later: [] };
+  SEASONAL.forEach(e => grouped[classifyEntry(e, currentMonth)].push(e));
+
+  grouped.later.sort((a, b) =>
+    monthsUntilPeak(a.peak, currentMonth) - monthsUntilPeak(b.peak, currentMonth)
+  );
+  grouped.soon.sort((a, b) =>
+    monthsUntilPeak(a.peak, currentMonth) - monthsUntilPeak(b.peak, currentMonth)
+  );
+
+  const sections = [
+    { key: 'peak',  label: 'Peak right now',     icon: 'ti-circle-filled' },
+    { key: 'soon',  label: 'Coming soon',        icon: 'ti-clock' },
+    { key: 'later', label: 'Later in the year',  icon: 'ti-calendar' },
+  ];
+
+  container.innerHTML = sections.filter(s => grouped[s.key].length).map(s => {
+    const cards = grouped[s.key].map(e => renderSeasonCard(e, s.key)).join('');
+    return `
+      <section class="season-section ${s.key}">
+        <h3 class="season-section-hdr"><i class="ti ${s.icon}" aria-hidden="true"></i>${s.label}</h3>
+        <div class="season-grid">${cards}</div>
+      </section>
+    `;
+  }).join('');
+}
+
+function renderSeasonCard(entry, status) {
+  const producer = entry.producerIds.length
+    ? PRODUCERS.find(p => p.id === entry.producerIds[0])
+    : null;
+  const hasLink = !!producer;
+  const onclick = hasLink
+    ? `onclick="openProducerFromSeason(${producer.id})"`
+    : '';
+  const link = producer
+    ? `<div class="season-producer-link"><i class="ti ti-arrow-right" aria-hidden="true"></i>${producer.name}</div>`
+    : '';
+  return `
+    <article class="season-card ${status}${hasLink ? ' has-link' : ''}" ${onclick}>
+      <div class="season-name">${entry.name}</div>
+      <div class="season-body">${entry.story}</div>
+      ${link}
+    </article>
+  `;
+}
+
+function openProducerFromSeason(id) {
+  const directoryTab = document.querySelector('.nav-tab[onclick*="directory"]');
+  switchTab('directory', directoryTab);
+  setTimeout(() => {
+    selectProducer(id);
+    document.getElementById('detailPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 50);
+}
 
 // ── CONTACT ───────────────────────────────────────────────────────
 function handleContact() {
