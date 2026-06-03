@@ -38,11 +38,15 @@
 
   /* ── HEADER ── */
   header { background: var(--lough); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 0 rgba(0,0,0,0.15); padding-top: env(safe-area-inset-top); }
-  .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; height: 72px; }
-  .brand { display: flex; align-items: center; gap: 14px; line-height: 1.1; text-decoration: none; }
+  .nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 1.5rem; display: flex; align-items: center; min-height: 72px; }
+  .brand { display: flex; align-items: center; gap: 14px; line-height: 1.15; text-decoration: none; min-width: 0; }
   .brand-logo { height: 52px; width: auto; filter: brightness(0) invert(1); opacity: 0.92; flex-shrink: 0; }
   .brand-main { font-family: 'Lora', Georgia, serif; font-size: 36px; font-weight: 600; color: #E8F0EC; letter-spacing: 0.01em; }
   .brand-stories { font-weight: 400; font-style: italic; color: #7A9EA0; letter-spacing: 0.01em; }
+  @media (max-width: 480px) {
+    .brand-logo { height: 44px; }
+    .brand-main { font-size: 28px; }
+  }
   .nav-tagline { font-size: 11px; color: #7A9EA0; font-style: italic; font-family: 'Lora', serif; margin-left: auto; }
 
   /* ── BOTTOM NAV ── */
