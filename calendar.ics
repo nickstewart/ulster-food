@@ -1,350 +1,18 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Ulster.food//Calendar Feed//EN
+PRODID:-//Ulster.food//Festivals Feed//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-NAME:Ulster.food — what's in season
-X-WR-CALNAME:Ulster.food — what's in season
-DESCRIPTION:Seasonal produce and food festivals across Ulster. Subscribe at ulster.food/calendar.ics
-X-WR-CALDESC:Seasonal produce and food festivals across Ulster. Subscribe at ulster.food/calendar.ics
+NAME:Ulster.food — food festivals
+X-WR-CALNAME:Ulster.food — food festivals
+DESCRIPTION:Food and farming festivals across Ulster. Subscribe at ulster.food/calendar.ics
+X-WR-CALDESC:Food and farming festivals across Ulster. Subscribe at ulster.food/calendar.ics
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
-COLOR:#3A4A52
-BEGIN:VEVENT
-UID:produce-1@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260401
-DTEND;VALUE=DATE:20260901
-RRULE:FREQ=YEARLY
-SUMMARY:Strangford langoustines — peak season
-DESCRIPTION:Spring creel season is in full swing. Firm\, sweet\, unstressed
- . Pulled by hand from the lough floor — minutes from the boat to the harbo
- ur wall.\n\nCategory: seafood\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Seafood
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-2@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20261001
-RRULE:FREQ=YEARLY
-SUMMARY:Strangford Lough oysters — peak season
-DESCRIPTION:Rope-grown on the lough\, deeply flavoured by the exceptional w
- ater quality of a designated European Marine Site. Clean\, briny\, full of
-  place.\n\nCategory: seafood\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Seafood
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-3@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260701
-RRULE:FREQ=YEARLY
-SUMMARY:Abernethy spring butter — peak season
-DESCRIPTION:Hand-churned from single-farm cream out of the Lagan Valley. Sp
- ring cream is the richest of the year — the dulse and sea salt variety is 
- the one to seek out.\n\nCategory: dairy\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Dairy
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-4@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260301
-DTEND;VALUE=DATE:20260501
-RRULE:FREQ=YEARLY
-SUMMARY:🌿 Wild garlic — peak season
-DESCRIPTION:A brief\, intense window through March and April when the Count
- y Down woodlands go magnificently green and pungent. Forage the edges\, mi
- nd the bluebells\, get there before it flowers — by mid-May it's over for 
- the year.\n\nCategory: veg\nWild / foraged — please forage responsibly.\n\
- nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Veg\,Foraged
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-5@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260801
-RRULE:FREQ=YEARLY
-SUMMARY:Comber Earlies — peak season
-DESCRIPTION:PGI-protected new potatoes from the heavy clay soils around Com
- ber. First diggings expected late May. Boil for ten minutes\, smear with b
- utter\, salt heavily.\n\nCategory: veg\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Veg
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-6@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260601
-DTEND;VALUE=DATE:20261001
-RRULE:FREQ=YEARLY
-SUMMARY:Mackerel — peak season
-DESCRIPTION:Summer fish\, landed at Kilkeel and the wider Down coast. Best 
- the day it comes in — flash on a hot pan\, eat with bread and butter and a
-  squeeze of lemon.\n\nCategory: seafood\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Seafood
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-7@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20261001
-RRULE:FREQ=YEARLY
-SUMMARY:Lobster — peak season
-DESCRIPTION:Down coast lobster from the Kilkeel and Portavogie fleets. Swee
- t\, dense flesh — the absolute peak of Irish summer eating. Boil briefly\,
-  butter generously.\n\nCategory: seafood\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Seafood
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-8@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260701
-RRULE:FREQ=YEARLY
-SUMMARY:Asparagus — peak season
-DESCRIPTION:A short\, glorious window. From small County Down market garden
- s — cut that morning\, on the plate that evening. The shorter the gap\, th
- e sweeter the spear.\n\nCategory: veg\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Veg
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-9@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260701
-DTEND;VALUE=DATE:20260901
-RRULE:FREQ=YEARLY
-SUMMARY:Strawberries — peak season
-DESCRIPTION:The County Down soft fruit season runs through summer with the 
- peak in July. Finlay's Place opens for pick-your-own — eat them warm from 
- the sun\, the day they're picked. Nothing in any supermarket comes close.\
- n\nCategory: fruit\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Fruit
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-10@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260801
-DTEND;VALUE=DATE:20261101
-RRULE:FREQ=YEARLY
-SUMMARY:Brown crab — peak season
-DESCRIPTION:Crab season builds through summer and peaks in early autumn. Th
- e Kilkeel fleet lands brown and velvet — sweet white meat\, rich brown mea
- t\, both at their best from August.\n\nCategory: seafood\n\nFull guide at 
- ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Seafood
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-11@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260801
-DTEND;VALUE=DATE:20261101
-RRULE:FREQ=YEARLY
-SUMMARY:Lough Neagh pollan — peak season
-DESCRIPTION:Endemic to Lough Neagh — a glacial relict species found in only
-  a handful of Irish loughs. Eaten on the lough shore\, exported to Switzer
- land\, almost invisible elsewhere.\n\nCategory: seafood\n\nFull guide at u
- lster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Seafood
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-12@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20261201
-RRULE:FREQ=YEARLY
-SUMMARY:Lough Neagh eels — peak season
-DESCRIPTION:PGI-protected\, caught by the Lough Neagh Fishermen's Co-operat
- ive at Toomebridge. Most are exported to Holland to be smoked. The Sargass
- o Sea to the lough and back — the great migration story of Ulster food.\n\
- nCategory: seafood\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Seafood
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-13@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260801
-DTEND;VALUE=DATE:20261001
-RRULE:FREQ=YEARLY
-SUMMARY:Heather honey — peak season
-DESCRIPTION:Late summer brings the heather harvest from the Mournes and the
-  higher ground. Dark\, thick\, intensely floral. The flagship Ulster honey
-  of the year.\n\nCategory: honey\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Honey
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-14@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20261201
-RRULE:FREQ=YEARLY
-SUMMARY:Heritage apples — peak season
-DESCRIPTION:Armagh is the orchard county of Ireland. Bramley for cooking\, 
- heritage varieties for eating — the harvest builds through September and r
- uns into winter storage.\n\nCategory: fruit\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Fruit
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-15@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20270301
-RRULE:FREQ=YEARLY
-SUMMARY:Venison — peak season
-DESCRIPTION:Wild and farmed venison through the colder months — Finnebrogue
-  Estate near Downpatrick is the County Down anchor. Lean\, deeply flavoure
- d\, the proper winter meat.\n\nCategory: meat\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Meat
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-16@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260701
-RRULE:FREQ=YEARLY
-SUMMARY:🌿 Elderflower — peak season
-DESCRIPTION:The hedgerows along quiet County Down lanes are about to burst 
- into creamy elderflower clusters. A six-week window from late May for cord
- ial\, fritters and elderflower champagne. Pick on a dry sunny morning — th
- e scent doesn't keep.\n\nCategory: veg\nWild / foraged — please forage res
- ponsibly.\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Veg\,Foraged
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-17@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260601
-DTEND;VALUE=DATE:20260901
-RRULE:FREQ=YEARLY
-SUMMARY:🌿 Samphire — peak season
-DESCRIPTION:Salt-tolerant marsh samphire on the muddy shores of Strangford 
- Lough and the Down coast. Cut with scissors above the woody base. Blanch b
- riefly\, butter generously\, eat with anything from the sea.\n\nCategory: 
- veg\nWild / foraged — please forage responsibly.\n\nFull guide at ulster.f
- ood
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Veg\,Foraged
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-18@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260401
-DTEND;VALUE=DATE:20260801
-RRULE:FREQ=YEARLY
-SUMMARY:🌿 Sea spinach — peak season
-DESCRIPTION:Wild sea beet on the upper shore — leafier and more interesting
-  than its cultivated cousin. Look for it on the strandlines from Killyleag
- h round to Ballyhalbert. Wilts down to nothing\, so pick a proper bag.\n\n
- Category: veg\nWild / foraged — please forage responsibly.\n\nFull guide a
- t ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Veg\,Foraged
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-19@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260801
-DTEND;VALUE=DATE:20261001
-RRULE:FREQ=YEARLY
-SUMMARY:🌿 Wild blackberries — peak season
-DESCRIPTION:The August hedgerow gift. Every back lane in County Down delive
- rs them — best the day after a warm spell\, picked low to avoid the dog wa
- lkers. Fold into apple crumbles\, make jam\, freeze flat on a tray for win
- ter.\n\nCategory: fruit\nWild / foraged — please forage responsibly.\n\nFu
- ll guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Fruit\,Foraged
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-20@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20261101
-RRULE:FREQ=YEARLY
-SUMMARY:🌿 Chanterelles — peak season
-DESCRIPTION:Golden chanterelles under the spruce in the Mournes and Tollymo
- re in late summer. Apricot-scented\, peppery\, the finest wild mushroom th
- at grows in Ulster. Only forage what you can identify with certainty.\n\nC
- ategory: mushroom\nWild / foraged — please forage responsibly.\n\nFull gui
- de at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Mushroom\,Foraged
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:produce-21@ulster.food
-DTSTAMP:20260603T155407Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261201
-RRULE:FREQ=YEARLY
-SUMMARY:🌿 Sloes — peak season
-DESCRIPTION:Blackthorn fruits along the lanes\, ready after the first frost
- . Tart and astringent raw — they exist to be steeped in gin with sugar and
-  patience. Pick October\, drink by Christmas.\n\nCategory: fruit\nWild / f
- oraged — please forage responsibly.\n\nFull guide at ulster.food
-LOCATION:Ulster
-URL:https://ulster.food/#season
-CATEGORIES:Fruit\,Foraged
-TRANSP:TRANSPARENT
-END:VEVENT
+COLOR:#C4622D
 BEGIN:VEVENT
 UID:festival-1@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260801
 RRULE:FREQ=YEARLY
@@ -365,7 +33,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-2@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260601
 RRULE:FREQ=YEARLY
@@ -383,7 +51,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-3@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260701
 RRULE:FREQ=YEARLY
@@ -403,7 +71,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-4@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260801
 RRULE:FREQ=YEARLY
@@ -420,7 +88,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-5@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260901
 RRULE:FREQ=YEARLY
@@ -438,7 +106,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-6@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260901
 RRULE:FREQ=YEARLY
@@ -458,7 +126,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-7@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260901
 RRULE:FREQ=YEARLY
@@ -475,7 +143,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-8@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20261001
 RRULE:FREQ=YEARLY
@@ -493,7 +161,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-9@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20261001
 RRULE:FREQ=YEARLY
@@ -513,7 +181,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-10@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20261001
 RRULE:FREQ=YEARLY
@@ -531,7 +199,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-11@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20261001
 RRULE:FREQ=YEARLY
@@ -550,7 +218,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-12@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20261001
 RRULE:FREQ=YEARLY
@@ -570,7 +238,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-13@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261101
 RRULE:FREQ=YEARLY
@@ -591,7 +259,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-14@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261101
 RRULE:FREQ=YEARLY
@@ -611,7 +279,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-15@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260601
 RRULE:FREQ=YEARLY
@@ -629,7 +297,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-16-r0@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260201
 DTEND;VALUE=DATE:20260301
 RRULE:FREQ=YEARLY
@@ -646,7 +314,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-16-r1@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20261001
 RRULE:FREQ=YEARLY
@@ -663,7 +331,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-17@ulster.food
-DTSTAMP:20260603T155407Z
+DTSTAMP:20260603T162608Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20270101
 RRULE:FREQ=YEARLY

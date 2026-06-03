@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """
-Generate calendar.ics from seasonal.json and festivals.json.
+Generate calendar.ics from festivals.json.
 
-Each seasonal item becomes a yearly-recurring event spanning its peak months.
 Each festival becomes a yearly-recurring event spanning its months.
 
-Re-run this whenever seasonal.json or festivals.json change.
+Produce season information lives in the In Season tab of the app rather
+than the calendar feed — long peak periods don't make useful calendar
+events. Festivals are the time-sensitive, plannable items, so the feed
+focuses on those.
+
+Re-run this whenever festivals.json changes.
 
     python3 generate_calendar.py
 """
@@ -15,7 +19,6 @@ from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-SEASONAL_FILE  = ROOT / "seasonal.json"
 FESTIVALS_FILE = ROOT / "festivals.json"
 OUT_FILE       = ROOT / "calendar.ics"
 
@@ -151,57 +154,23 @@ def event_dates_for_range(start_month, end_month):
 
 
 def main():
-    with SEASONAL_FILE.open() as f:
-        seasonal = json.load(f)
     with FESTIVALS_FILE.open() as f:
         festivals = json.load(f)
 
     out = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        "PRODID:-//Ulster.food//Calendar Feed//EN",
+        "PRODID:-//Ulster.food//Festivals Feed//EN",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
-        "NAME:Ulster.food — what's in season",
-        "X-WR-CALNAME:Ulster.food — what's in season",
-        "DESCRIPTION:Seasonal produce and food festivals across Ulster. Subscribe at ulster.food/calendar.ics",
-        "X-WR-CALDESC:Seasonal produce and food festivals across Ulster. Subscribe at ulster.food/calendar.ics",
+        "NAME:Ulster.food — food festivals",
+        "X-WR-CALNAME:Ulster.food — food festivals",
+        "DESCRIPTION:Food and farming festivals across Ulster. Subscribe at ulster.food/calendar.ics",
+        "X-WR-CALDESC:Food and farming festivals across Ulster. Subscribe at ulster.food/calendar.ics",
         "REFRESH-INTERVAL;VALUE=DURATION:P1D",
         "X-PUBLISHED-TTL:P1D",
-        "COLOR:#3A4A52",
+        "COLOR:#C4622D",
     ]
-
-    # ── Seasonal produce ─────────────────────────────────────────────
-    for entry in seasonal:
-        ranges = contiguous_ranges(entry["peak"])
-        for idx, (start_m, end_m) in enumerate(ranges):
-            dt_start, dt_end = event_dates_for_range(start_m, end_m)
-            tag = "🌿 " if entry.get("foraged") else ""
-            summary = f"{tag}{entry['name']} — peak season"
-            desc_parts = [
-                entry["story"],
-                "",
-                f"Category: {entry['category']}",
-            ]
-            if entry.get("foraged"):
-                desc_parts.append("Wild / foraged — please forage responsibly.")
-            desc_parts.append("")
-            desc_parts.append("Full guide at ulster.food")
-            description = "\n".join(desc_parts)
-            categories = entry["category"].capitalize()
-            if entry.get("foraged"):
-                categories += ",Foraged"
-            uid_suffix = f"-r{idx}" if len(ranges) > 1 else ""
-            out.extend(make_event(
-                uid=f"produce-{entry['id']}{uid_suffix}",
-                dt_start=dt_start,
-                dt_end_exclusive=dt_end,
-                summary=summary,
-                description=description,
-                location="Ulster",
-                url="https://ulster.food/#season",
-                categories=categories,
-            ))
 
     # ── Festivals ────────────────────────────────────────────────────
     for fest in festivals:
@@ -240,12 +209,8 @@ def main():
     content = "\r\n".join(out) + "\r\n"
     OUT_FILE.write_text(content)
 
-    produce_events  = sum(len(contiguous_ranges(e["peak"]))  for e in seasonal)
     festival_events = sum(len(contiguous_ranges(f["months"])) for f in festivals)
-    total = produce_events + festival_events
-    print(f"Wrote {OUT_FILE.name}: {total} events")
-    print(f"  Produce events:  {produce_events}")
-    print(f"  Festival events: {festival_events}")
+    print(f"Wrote {OUT_FILE.name}: {festival_events} festival events from {len(festivals)} festivals")
 
 
 if __name__ == "__main__":
