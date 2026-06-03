@@ -225,6 +225,9 @@
   .season-producer-link { font-size: 11.5px; color: var(--lough); font-weight: 500; margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); display: flex; align-items: center; gap: 4px; }
   .season-producer-link i { font-size: 13px; }
   .season-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .foraged-badge { display: inline-flex; align-items: center; gap: 3px; background: var(--sage-lt); color: var(--grass); border-radius: 4px; padding: 2px 7px; font-size: 10px; font-weight: 600; font-family: 'Inter', sans-serif; letter-spacing: 0.04em; text-transform: uppercase; margin-left: 8px; vertical-align: middle; }
+  .foraged-badge i { font-size: 11px; }
+  .season-card.foraged { background: linear-gradient(to bottom right, var(--white), #FAFDF7); }
 
   /* ── INSTALL BANNER ── */
   .install-banner {
@@ -423,6 +426,11 @@
         <p>A living guide to the Ulster food calendar — what's at peak, what's coming, and what to look forward to further down the year. Tap any card to meet the producer.</p>
       </div>
     </div>
+    <div class="filter-bar" role="group" aria-label="Filter seasonal items">
+      <button class="pill active" onclick="setSeasonFilter('all', this)">Everything</button>
+      <button class="pill" onclick="setSeasonFilter('producer', this)"><i class="ti ti-shovel" aria-hidden="true"></i> Producers</button>
+      <button class="pill" onclick="setSeasonFilter('wild', this)"><i class="ti ti-plant" aria-hidden="true"></i> Wild &amp; foraged</button>
+    </div>
     <div id="seasonContent" aria-live="polite"></div>
   </div>
 
@@ -555,6 +563,8 @@ function restoreTabFromHash() {
 window.addEventListener('hashchange', restoreTabFromHash);
 
 // ── IN SEASON ─────────────────────────────────────────────────────
+let seasonFilter = 'all';
+
 function monthsUntilPeak(peakMonths, currentMonth) {
   let min = 12;
   for (const m of peakMonths) {
@@ -571,20 +581,32 @@ function classifyEntry(entry, currentMonth) {
   return 'later';
 }
 
+function setSeasonFilter(f, el) {
+  seasonFilter = f;
+  document.querySelectorAll('#tab-season .filter-bar .pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  renderSeason();
+}
+
 function renderSeason() {
   const container = document.getElementById('seasonContent');
   const now = new Date();
   const currentMonth = now.getMonth();
 
-  const grouped = { peak: [], soon: [], later: [] };
-  SEASONAL.forEach(e => grouped[classifyEntry(e, currentMonth)].push(e));
+  const entries = SEASONAL.filter(e => {
+    if (seasonFilter === 'wild')     return !!e.foraged;
+    if (seasonFilter === 'producer') return !e.foraged;
+    return true;
+  });
 
-  grouped.later.sort((a, b) =>
-    monthsUntilPeak(a.peak, currentMonth) - monthsUntilPeak(b.peak, currentMonth)
-  );
-  grouped.soon.sort((a, b) =>
-    monthsUntilPeak(a.peak, currentMonth) - monthsUntilPeak(b.peak, currentMonth)
-  );
+  const grouped = { peak: [], soon: [], later: [] };
+  entries.forEach(e => grouped[classifyEntry(e, currentMonth)].push(e));
+
+  ['later', 'soon'].forEach(k => {
+    grouped[k].sort((a, b) =>
+      monthsUntilPeak(a.peak, currentMonth) - monthsUntilPeak(b.peak, currentMonth)
+    );
+  });
 
   const sections = [
     { key: 'peak',  label: 'Peak right now',     icon: 'ti-circle-filled' },
@@ -592,7 +614,7 @@ function renderSeason() {
     { key: 'later', label: 'Later in the year',  icon: 'ti-calendar' },
   ];
 
-  container.innerHTML = sections.filter(s => grouped[s.key].length).map(s => {
+  const html = sections.filter(s => grouped[s.key].length).map(s => {
     const cards = grouped[s.key].map(e => renderSeasonCard(e, s.key)).join('');
     return `
       <section class="season-section ${s.key}">
@@ -601,6 +623,9 @@ function renderSeason() {
       </section>
     `;
   }).join('');
+
+  container.innerHTML = html ||
+    `<div class="no-results"><i class="ti ti-mood-empty" style="font-size:32px;display:block;margin-bottom:8px;"></i>Nothing in this view right now — try another filter.</div>`;
 }
 
 function renderSeasonCard(entry, status) {
@@ -614,9 +639,12 @@ function renderSeasonCard(entry, status) {
   const link = producer
     ? `<div class="season-producer-link"><i class="ti ti-arrow-right" aria-hidden="true"></i>${producer.name}</div>`
     : '';
+  const foragedBadge = entry.foraged
+    ? `<span class="foraged-badge"><i class="ti ti-plant" aria-hidden="true"></i>Wild</span>`
+    : '';
   return `
-    <article class="season-card ${status}${hasLink ? ' has-link' : ''}" ${onclick}>
-      <div class="season-name">${entry.name}</div>
+    <article class="season-card ${status}${hasLink ? ' has-link' : ''}${entry.foraged ? ' foraged' : ''}" ${onclick}>
+      <div class="season-name">${entry.name}${foragedBadge}</div>
       <div class="season-body">${entry.story}</div>
       ${link}
     </article>
