@@ -229,6 +229,43 @@
   .foraged-badge i { font-size: 11px; }
   .season-card.foraged { background: linear-gradient(to bottom right, var(--white), #FAFDF7); }
 
+  /* View toggle + filter bar layout */
+  .season-controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 1.25rem; }
+  .season-controls .filter-bar { margin-bottom: 0; }
+  .view-toggle { display: inline-flex; background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 3px; gap: 2px; }
+  .view-btn { background: none; border: none; padding: 6px 14px; font-size: 12.5px; font-family: 'Inter', sans-serif; color: #5A6A6E; border-radius: 16px; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; font-weight: 500; transition: all 0.15s; }
+  .view-btn i { font-size: 13px; }
+  .view-btn:hover:not(.active) { color: var(--charcoal); }
+  .view-btn.active { background: var(--lough); color: var(--lough-lt); }
+
+  /* Mini-bar on cards */
+  .season-bar-wrap { margin-top: 12px; }
+  .season-bar { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; }
+  .bar-cell { height: 7px; background: #ECEEEC; border-radius: 1px; position: relative; }
+  .bar-cell.season { background: #D6E5C8; }
+  .bar-cell.peak { background: var(--sage); }
+  .bar-cell.current { outline: 2px solid var(--ember); outline-offset: 1px; z-index: 1; }
+  .season-bar-labels { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; margin-top: 5px; font-size: 9px; color: var(--mid-grey); text-align: center; font-family: 'Inter', sans-serif; letter-spacing: 0; }
+  .season-bar-labels span.current { color: var(--ember); font-weight: 600; }
+
+  /* Year view */
+  .year-view { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .year-header { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 12px; padding: 12px 16px; align-items: center; background: var(--lough); }
+  .year-header-spacer { font-family: 'Lora', serif; font-size: 12px; font-weight: 600; color: #E8F0EC; letter-spacing: 0.04em; text-transform: uppercase; }
+  .year-header-months { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; font-size: 10px; color: #7A9EA0; text-align: center; font-weight: 600; letter-spacing: 0; }
+  .year-header-months span.current { color: var(--ember); }
+  .year-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 12px; padding: 11px 16px; align-items: center; border-top: 1px solid var(--border); transition: background 0.15s; }
+  .year-row.has-link { cursor: pointer; }
+  .year-row.has-link:hover { background: #F9FAF8; }
+  .year-row-name { font-family: 'Lora', serif; font-size: 13px; color: var(--charcoal); display: flex; align-items: center; gap: 6px; min-width: 0; }
+  .year-row-name .name-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .year-row-bar { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; }
+  .year-cell { height: 10px; background: #ECEEEC; border-radius: 1px; }
+  .year-cell.season { background: #D6E5C8; }
+  .year-cell.peak { background: var(--sage); }
+  .year-cell.current { outline: 2px solid var(--ember); outline-offset: 1px; z-index: 1; }
+  .year-row .foraged-badge { font-size: 9px; padding: 1px 5px; }
+
   /* ── INSTALL BANNER ── */
   .install-banner {
     display: none;
@@ -426,10 +463,20 @@
         <p>A living guide to the Ulster food calendar — what's at peak, what's coming, and what to look forward to further down the year. Tap any card to meet the producer.</p>
       </div>
     </div>
-    <div class="filter-bar" role="group" aria-label="Filter seasonal items">
-      <button class="pill active" onclick="setSeasonFilter('all', this)">Everything</button>
-      <button class="pill" onclick="setSeasonFilter('producer', this)"><i class="ti ti-shovel" aria-hidden="true"></i> Producers</button>
-      <button class="pill" onclick="setSeasonFilter('wild', this)"><i class="ti ti-plant" aria-hidden="true"></i> Wild &amp; foraged</button>
+    <div class="season-controls">
+      <div class="view-toggle" role="group" aria-label="Choose view">
+        <button class="view-btn active" onclick="setSeasonView('now', this)">
+          <i class="ti ti-circle-filled" aria-hidden="true"></i>Now
+        </button>
+        <button class="view-btn" onclick="setSeasonView('year', this)">
+          <i class="ti ti-calendar-month" aria-hidden="true"></i>Year
+        </button>
+      </div>
+      <div class="filter-bar" role="group" aria-label="Filter seasonal items">
+        <button class="pill active" onclick="setSeasonFilter('all', this)">Everything</button>
+        <button class="pill" onclick="setSeasonFilter('producer', this)"><i class="ti ti-shovel" aria-hidden="true"></i> Producers</button>
+        <button class="pill" onclick="setSeasonFilter('wild', this)"><i class="ti ti-plant" aria-hidden="true"></i> Wild &amp; foraged</button>
+      </div>
     </div>
     <div id="seasonContent" aria-live="polite"></div>
   </div>
@@ -564,6 +611,10 @@ window.addEventListener('hashchange', restoreTabFromHash);
 
 // ── IN SEASON ─────────────────────────────────────────────────────
 let seasonFilter = 'all';
+let seasonView   = 'now';
+
+const MONTH_LETTERS = ['J','F','M','A','M','J','J','A','S','O','N','D'];
+const MONTH_NAMES   = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
 function monthsUntilPeak(peakMonths, currentMonth) {
   let min = 12;
@@ -588,10 +639,16 @@ function setSeasonFilter(f, el) {
   renderSeason();
 }
 
+function setSeasonView(v, el) {
+  seasonView = v;
+  document.querySelectorAll('#tab-season .view-toggle .view-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  renderSeason();
+}
+
 function renderSeason() {
   const container = document.getElementById('seasonContent');
-  const now = new Date();
-  const currentMonth = now.getMonth();
+  const currentMonth = new Date().getMonth();
 
   const entries = SEASONAL.filter(e => {
     if (seasonFilter === 'wild')     return !!e.foraged;
@@ -599,6 +656,17 @@ function renderSeason() {
     return true;
   });
 
+  if (!entries.length) {
+    container.innerHTML = `<div class="no-results"><i class="ti ti-mood-empty" style="font-size:32px;display:block;margin-bottom:8px;"></i>Nothing in this view right now — try another filter.</div>`;
+    return;
+  }
+
+  container.innerHTML = seasonView === 'year'
+    ? renderYearView(entries, currentMonth)
+    : renderNowView(entries, currentMonth);
+}
+
+function renderNowView(entries, currentMonth) {
   const grouped = { peak: [], soon: [], later: [] };
   entries.forEach(e => grouped[classifyEntry(e, currentMonth)].push(e));
 
@@ -614,8 +682,8 @@ function renderSeason() {
     { key: 'later', label: 'Later in the year',  icon: 'ti-calendar' },
   ];
 
-  const html = sections.filter(s => grouped[s.key].length).map(s => {
-    const cards = grouped[s.key].map(e => renderSeasonCard(e, s.key)).join('');
+  return sections.filter(s => grouped[s.key].length).map(s => {
+    const cards = grouped[s.key].map(e => renderSeasonCard(e, s.key, currentMonth)).join('');
     return `
       <section class="season-section ${s.key}">
         <h3 class="season-section-hdr"><i class="ti ${s.icon}" aria-hidden="true"></i>${s.label}</h3>
@@ -623,19 +691,14 @@ function renderSeason() {
       </section>
     `;
   }).join('');
-
-  container.innerHTML = html ||
-    `<div class="no-results"><i class="ti ti-mood-empty" style="font-size:32px;display:block;margin-bottom:8px;"></i>Nothing in this view right now — try another filter.</div>`;
 }
 
-function renderSeasonCard(entry, status) {
+function renderSeasonCard(entry, status, currentMonth) {
   const producer = entry.producerIds.length
     ? PRODUCERS.find(p => p.id === entry.producerIds[0])
     : null;
   const hasLink = !!producer;
-  const onclick = hasLink
-    ? `onclick="openProducerFromSeason(${producer.id})"`
-    : '';
+  const onclick = hasLink ? `onclick="openProducerFromSeason(${producer.id})"` : '';
   const link = producer
     ? `<div class="season-producer-link"><i class="ti ti-arrow-right" aria-hidden="true"></i>${producer.name}</div>`
     : '';
@@ -646,8 +709,77 @@ function renderSeasonCard(entry, status) {
     <article class="season-card ${status}${hasLink ? ' has-link' : ''}${entry.foraged ? ' foraged' : ''}" ${onclick}>
       <div class="season-name">${entry.name}${foragedBadge}</div>
       <div class="season-body">${entry.story}</div>
+      ${renderMiniBar(entry, currentMonth)}
       ${link}
     </article>
+  `;
+}
+
+function monthCellClass(entry, monthIdx, currentMonth) {
+  const isPeak    = entry.peak.includes(monthIdx);
+  const isSeason  = !isPeak && entry.season.includes(monthIdx);
+  const isCurrent = monthIdx === currentMonth && (isPeak || isSeason);
+  const parts = [];
+  if (isPeak)    parts.push('peak');
+  else if (isSeason) parts.push('season');
+  if (isCurrent) parts.push('current');
+  return parts.join(' ');
+}
+
+function renderMiniBar(entry, currentMonth) {
+  const cells = MONTH_LETTERS.map((_, i) =>
+    `<span class="bar-cell ${monthCellClass(entry, i, currentMonth)}" title="${MONTH_NAMES[i]}"></span>`
+  ).join('');
+  const labels = MONTH_LETTERS.map((m, i) =>
+    `<span class="${i === currentMonth ? 'current' : ''}">${m}</span>`
+  ).join('');
+  return `
+    <div class="season-bar-wrap">
+      <div class="season-bar">${cells}</div>
+      <div class="season-bar-labels">${labels}</div>
+    </div>
+  `;
+}
+
+function renderYearView(entries, currentMonth) {
+  // Sort: peak-now first, then by how soon the next peak starts
+  const sorted = [...entries].sort((a, b) => {
+    const aPeak = a.peak.includes(currentMonth) ? -1 : monthsUntilPeak(a.peak, currentMonth);
+    const bPeak = b.peak.includes(currentMonth) ? -1 : monthsUntilPeak(b.peak, currentMonth);
+    if (aPeak !== bPeak) return aPeak - bPeak;
+    return a.name.localeCompare(b.name);
+  });
+
+  const headerMonths = MONTH_LETTERS.map((m, i) =>
+    `<span class="${i === currentMonth ? 'current' : ''}" title="${MONTH_NAMES[i]}">${m}</span>`
+  ).join('');
+
+  const rows = sorted.map(e => {
+    const producer = e.producerIds.length ? PRODUCERS.find(p => p.id === e.producerIds[0]) : null;
+    const hasLink = !!producer;
+    const onclick = hasLink ? `onclick="openProducerFromSeason(${producer.id})"` : '';
+    const cells = MONTH_LETTERS.map((_, i) =>
+      `<span class="year-cell ${monthCellClass(e, i, currentMonth)}" title="${MONTH_NAMES[i]}"></span>`
+    ).join('');
+    const badge = e.foraged
+      ? `<span class="foraged-badge"><i class="ti ti-plant" aria-hidden="true"></i>Wild</span>`
+      : '';
+    return `
+      <div class="year-row${hasLink ? ' has-link' : ''}" ${onclick}>
+        <div class="year-row-name"><span class="name-text">${e.name}</span>${badge}</div>
+        <div class="year-row-bar">${cells}</div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <div class="year-view">
+      <div class="year-header">
+        <div class="year-header-spacer">The year</div>
+        <div class="year-header-months">${headerMonths}</div>
+      </div>
+      ${rows}
+    </div>
   `;
 }
 
