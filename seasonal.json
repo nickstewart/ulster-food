@@ -33,11 +33,11 @@
     "id": 4,
     "name": "Wild garlic",
     "category": "veg",
-    "peak": [2, 3, 4],
-    "season": [2, 3, 4],
-    "story": "The hedgerows of County Down go briefly, magnificently green and pungent every spring. Forage the edges, mind the bluebells, get there before it flowers.",
+    "peak": [2, 3],
+    "season": [2, 3],
+    "story": "A brief, intense window through March and April when the County Down woodlands go magnificently green and pungent. Forage the edges, mind the bluebells, get there before it flowers — by mid-May it's over for the year.",
     "producerIds": [],
-    "tags": ["foraged", "hedgerows", "spring"]
+    "tags": ["foraged", "woodland", "spring"]
   },
   {
     "id": 5,
