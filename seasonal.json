@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Strangford langoustines",
+    "category": "seafood",
+    "peak": [3, 4, 5, 6, 7],
+    "season": [2, 3, 4, 5, 6, 7, 8, 9],
+    "story": "Spring creel season is in full swing. Firm, sweet, unstressed. Pulled by hand from the lough floor — minutes from the boat to the harbour wall.",
+    "producerIds": [1],
+    "tags": ["creel-caught", "Strangford Lough", "Kircubbin"]
+  },
+  {
+    "id": 2,
+    "name": "Strangford Lough oysters",
+    "category": "seafood",
+    "peak": [4, 5, 6, 7, 8],
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "story": "Rope-grown on the lough, deeply flavoured by the exceptional water quality of a designated European Marine Site. Clean, briny, full of place.",
+    "producerIds": [2],
+    "tags": ["rope-grown", "Strangford Lough", "European Marine Site"]
+  },
+  {
+    "id": 3,
+    "name": "Abernethy spring butter",
+    "category": "dairy",
+    "peak": [4, 5],
+    "season": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "story": "Hand-churned from single-farm cream out of the Lagan Valley. Spring cream is the richest of the year — the dulse and sea salt variety is the one to seek out.",
+    "producerIds": [5],
+    "tags": ["hand-churned", "Lagan Valley", "single-farm cream"]
+  },
+  {
+    "id": 4,
+    "name": "Wild garlic",
+    "category": "veg",
+    "peak": [2, 3, 4],
+    "season": [2, 3, 4],
+    "story": "The hedgerows of County Down go briefly, magnificently green and pungent every spring. Forage the edges, mind the bluebells, get there before it flowers.",
+    "producerIds": [],
+    "tags": ["foraged", "hedgerows", "spring"]
+  },
+  {
+    "id": 5,
+    "name": "Comber Earlies",
+    "category": "veg",
+    "peak": [4, 5, 6],
+    "season": [4, 5, 6, 7],
+    "story": "PGI-protected new potatoes from the heavy clay soils around Comber. First diggings expected late May. Boil for ten minutes, smear with butter, salt heavily.",
+    "producerIds": [9, 6],
+    "tags": ["PGI", "Comber", "new potatoes"]
+  },
+  {
+    "id": 6,
+    "name": "Mackerel",
+    "category": "seafood",
+    "peak": [5, 6, 7, 8],
+    "season": [4, 5, 6, 7, 8, 9],
+    "story": "Summer fish, landed at Kilkeel and the wider Down coast. Best the day it comes in — flash on a hot pan, eat with bread and butter and a squeeze of lemon.",
+    "producerIds": [4],
+    "tags": ["summer", "Kilkeel", "oily fish"]
+  },
+  {
+    "id": 7,
+    "name": "Lobster",
+    "category": "seafood",
+    "peak": [4, 5, 6, 7, 8],
+    "season": [3, 4, 5, 6, 7, 8, 9],
+    "story": "Down coast lobster from the Kilkeel and Portavogie fleets. Sweet, dense flesh — the absolute peak of Irish summer eating. Boil briefly, butter generously.",
+    "producerIds": [3, 4],
+    "tags": ["Kilkeel", "Portavogie", "summer"]
+  },
+  {
+    "id": 8,
+    "name": "Asparagus",
+    "category": "veg",
+    "peak": [4, 5],
+    "season": [3, 4, 5],
+    "story": "A short, glorious window. From small County Down market gardens — cut that morning, on the plate that evening. The shorter the gap, the sweeter the spear.",
+    "producerIds": [11, 12],
+    "tags": ["market garden", "short season"]
+  },
+  {
+    "id": 9,
+    "name": "Strawberries",
+    "category": "fruit",
+    "peak": [5, 6],
+    "season": [5, 6, 7],
+    "story": "Soft fruit season at Finlay's Place and the County Down growers. Eat them warm from the sun, the day they're picked. Nothing in any supermarket comes close.",
+    "producerIds": [27],
+    "tags": ["soft fruit", "PYO"]
+  },
+  {
+    "id": 10,
+    "name": "Brown crab",
+    "category": "seafood",
+    "peak": [7, 8, 9],
+    "season": [5, 6, 7, 8, 9, 10],
+    "story": "Crab season builds through summer and peaks in early autumn. The Kilkeel fleet lands brown and velvet — sweet white meat, rich brown meat, both at their best from August.",
+    "producerIds": [4],
+    "tags": ["Kilkeel", "autumn", "white meat"]
+  },
+  {
+    "id": 11,
+    "name": "Lough Neagh pollan",
+    "category": "seafood",
+    "peak": [7, 8, 9],
+    "season": [6, 7, 8, 9, 10],
+    "story": "Endemic to Lough Neagh — a glacial relict species found in only a handful of Irish loughs. Eaten on the lough shore, exported to Switzerland, almost invisible elsewhere.",
+    "producerIds": [],
+    "tags": ["Lough Neagh", "endemic", "glacial relict"]
+  },
+  {
+    "id": 12,
+    "name": "Lough Neagh eels",
+    "category": "seafood",
+    "peak": [8, 9, 10],
+    "season": [4, 5, 6, 7, 8, 9, 10],
+    "story": "PGI-protected, caught by the Lough Neagh Fishermen's Co-operative at Toomebridge. Most are exported to Holland to be smoked. The Sargasso Sea to the lough and back — the great migration story of Ulster food.",
+    "producerIds": [],
+    "tags": ["PGI", "Lough Neagh", "smoked"]
+  },
+  {
+    "id": 13,
+    "name": "Heather honey",
+    "category": "honey",
+    "peak": [7, 8],
+    "season": [7, 8, 9],
+    "story": "Late summer brings the heather harvest from the Mournes and the higher ground. Dark, thick, intensely floral. The flagship Ulster honey of the year.",
+    "producerIds": [16, 17, 13],
+    "tags": ["Mournes", "late summer", "single-flower"]
+  },
+  {
+    "id": 14,
+    "name": "Heritage apples",
+    "category": "fruit",
+    "peak": [8, 9, 10],
+    "season": [8, 9, 10, 11],
+    "story": "Armagh is the orchard county of Ireland. Bramley for cooking, heritage varieties for eating — the harvest builds through September and runs into winter storage.",
+    "producerIds": [27],
+    "tags": ["Armagh", "Bramley", "autumn"]
+  },
+  {
+    "id": 15,
+    "name": "Venison",
+    "category": "meat",
+    "peak": [9, 10, 11, 0, 1],
+    "season": [8, 9, 10, 11, 0, 1, 2],
+    "story": "Wild and farmed venison through the colder months — Finnebrogue Estate near Downpatrick is the County Down anchor. Lean, deeply flavoured, the proper winter meat.",
+    "producerIds": [10],
+    "tags": ["Finnebrogue", "winter", "game"]
+  }
+]
