@@ -90,7 +90,7 @@
     "months": [
       5
     ],
-    "dates": "Saturday 28 June 2026, 11am–5pm",
+    "dates": "Saturday 20 June 2026, 11am–5pm",
     "frequency": "annual",
     "story": "The flagship celebration of Comber's PGI-protected new potatoes. Artisan food and drink stalls, vintage tractor display, celebrity chef demos (Anna Haugh in 2026), children's entertainment, traditional bands. Drew 11,000+ visitors in recent years. Free family event.",
     "focus": "PGI Comber Earlies new potatoes",
@@ -110,8 +110,8 @@
     "type": "food",
     "occurrences": [
       {
-        "start": "2026-06-28",
-        "end": "2026-06-28",
+        "start": "2026-06-20",
+        "end": "2026-06-20",
         "approx": false
       }
     ]
