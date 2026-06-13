@@ -516,5 +516,37 @@
       "hedgerow",
       "sloe gin"
     ]
+  },
+  {
+    "id": 22,
+    "name": "Monkfish",
+    "category": "seafood",
+    "peak": [
+      9,
+      10,
+      11,
+      0,
+      1
+    ],
+    "season": [
+      8,
+      9,
+      10,
+      11,
+      0,
+      1,
+      2,
+      3
+    ],
+    "story": "A wild whitefish on the up — Celtic and Irish Sea anglerfish stocks have been recovering, with fishing pressure below sustainable levels. Trawl-caught off the Down coast and best as a good-sized fish; firm, meaty, holds up to fire. Ask for larger monkfish and you're choosing the more sustainable end of the catch.",
+    "producerIds": [
+      30,
+      4
+    ],
+    "tags": [
+      "trawl-caught",
+      "whitefish",
+      "Down coast"
+    ]
   }
 ]
