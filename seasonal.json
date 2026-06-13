@@ -145,34 +145,6 @@
     ]
   },
   {
-    "id": 6,
-    "name": "Mackerel",
-    "category": "seafood",
-    "peak": [
-      5,
-      6,
-      7,
-      8
-    ],
-    "season": [
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-    ],
-    "story": "Summer fish, landed at Kilkeel and the wider Down coast. Best the day it comes in — flash on a hot pan, eat with bread and butter and a squeeze of lemon.",
-    "producerIds": [
-      4
-    ],
-    "tags": [
-      "summer",
-      "Kilkeel",
-      "oily fish"
-    ]
-  },
-  {
     "id": 7,
     "name": "Lobster",
     "category": "seafood",

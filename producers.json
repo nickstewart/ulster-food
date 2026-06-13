@@ -1771,5 +1771,67 @@
     "wholesale": true,
     "priceRange": "££",
     "images": []
+  },
+  {
+    "id": 30,
+    "name": "East Coast Seafoods (Marty Johnston)",
+    "location": {
+      "label": "Ballyhornan, Lecale coast",
+      "lat": 54.3018,
+      "lng": -5.5236
+    },
+    "category": "seafood",
+    "badges": [],
+    "tags": [
+      "smoked salmon",
+      "smokehouse",
+      "supplier",
+      "Lecale coast",
+      "Ballyhornan"
+    ],
+    "sustainabilityMethod": "Independent smokehouse and supplier sourcing through a network of local Co Down day boats",
+    "keyFacts": [
+      "Run by Martin (Marty) and Eileen Johnston from Ballyhornan on the Lecale coast",
+      "Northern Ireland's largest independent seafood supplier — over 30 years trading",
+      "Award-winning smoked salmon used by leading chefs across Ireland and the UK",
+      "Sources fresh fish through an extensive network of local fishermen and day boats",
+      "Free text-alert service tells customers what has just landed"
+    ],
+    "sustainabilityStory": "Sitting between the Co Down boats and the kitchen, East Coast Seafoods is the link most people never see. Marty and Eileen Johnston have spent over thirty years turning the day's landings at Ballyhornan into the fish on the plate at some of Ireland's best tables — and a smoked salmon good enough to have built its own reputation. A reminder that the chain from sea to plate is only as good as the people who keep it short.",
+    "brandVoice": "Established, trusted, quietly expert. This is the engine room of the Co Down seafood trade rather than a single boat — the story is the network, the smokehouse, and three decades of knowing exactly who lands what and when. Visuals: the smokehouse, sides of salmon, harbour landings, the text-alert going out.",
+    "contentIdeas": [
+      "Inside the smokehouse — how an award-winning side of salmon is made",
+      "The text that tells the chefs what just landed — a day in the life of the largest independent supplier in NI",
+      "Sea to plate, kept short — the role of a good fishmonger in the sustainable chain"
+    ],
+    "whereToBuy": {
+      "label": "Ballyhornan · supply to restaurants and chefs across Ireland and the UK · free catch-of-the-day text alert",
+      "url": "https://www.eastcoastseafoods.co.uk"
+    },
+    "contact": {
+      "website": "https://www.eastcoastseafoods.co.uk",
+      "instagram": "",
+      "phone": "028 4484 1196",
+      "email": ""
+    },
+    "season": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "visitable": false,
+    "delivery": true,
+    "wholesale": true,
+    "priceRange": "££",
+    "images": []
   }
 ]
