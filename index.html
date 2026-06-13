@@ -187,6 +187,9 @@
   .interest-item input { display: none; }
   .subscribe-btn { width: 100%; height: 42px; background: var(--ember); color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; font-family: 'Inter', sans-serif; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: opacity 0.15s; }
   .subscribe-btn:hover { opacity: 0.9; }
+  .subscribe-btn:disabled { opacity: 0.6; cursor: default; }
+  .form-status { font-size: 12.5px; line-height: 1.5; margin-top: 10px; display: none; }
+  .form-status.error { display: block; color: #B23A1E; }
   .subscribe-success { display: none; text-align: center; padding: 2rem; color: var(--grass); }
   .subscribe-success i { font-size: 40px; margin-bottom: 12px; display: block; color: var(--sage); }
   .subscribe-success p { font-size: 14px; line-height: 1.6; }
@@ -413,9 +416,10 @@
             <option value="general">General enquiry</option>
           </select>
           <textarea id="contactMessage" placeholder="Tell us more…" aria-label="Your message"></textarea>
-          <button class="subscribe-btn" onclick="handleContact()">
+          <button class="subscribe-btn" id="contactBtn" onclick="handleContact()">
             <i class="ti ti-send" aria-hidden="true"></i>Send message
           </button>
+          <div class="form-status" id="contactStatus" role="alert"></div>
         </div>
         <div class="contact-success" id="contactSuccess">
           <i class="ti ti-circle-check"></i>
@@ -455,9 +459,10 @@
             <label class="interest-item" onclick="toggleInterest(this)"><input type="checkbox" /><i class="ti ti-plant" aria-hidden="true"></i>Veg &amp; farm</label>
             <label class="interest-item" onclick="toggleInterest(this)"><input type="checkbox" /><i class="ti ti-map" aria-hidden="true"></i>Van travels</label>
           </div>
-          <button class="subscribe-btn" onclick="handleSubscribe()">
+          <button class="subscribe-btn" id="subscribeBtn" onclick="handleSubscribe()">
             <i class="ti ti-send" aria-hidden="true"></i>Subscribe — it's free
           </button>
+          <div class="form-status" id="subscribeStatus" role="alert"></div>
         </div>
         <div class="subscribe-success" id="subscribeSuccess">
           <i class="ti ti-circle-check"></i>
@@ -956,33 +961,104 @@ function openProducerFromSeason(id) {
 }
 
 // ── CONTACT ───────────────────────────────────────────────────────
-function handleContact() {
-  const name  = document.getElementById('contactName').value.trim();
-  const email = document.getElementById('contactEmail').value.trim();
-  const msg   = document.getElementById('contactMessage').value.trim();
-  if (!email || !email.includes('@')) {
-    const inp = document.getElementById('contactEmail');
-    inp.focus(); inp.style.borderColor = '#C4622D';
-    setTimeout(() => inp.style.borderColor = '', 1500);
-    return;
+// Formspree endpoint — create a form at https://formspree.io with the
+// recipient set to de4dd4ck@gmail.com, then paste the endpoint here, e.g.
+// 'https://formspree.io/f/abcdwxyz'. While blank, forms validate and show
+// success but do NOT send (so nothing breaks before it's configured).
+const FORMSPREE_ENDPOINT = '';
+
+async function submitForm(data) {
+  if (!FORMSPREE_ENDPOINT) {
+    console.warn('Formspree endpoint not set — message not actually sent.');
+    return true;
   }
-  document.getElementById('contactBody').style.display = 'none';
-  document.getElementById('contactSuccess').style.display = 'block';
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    return res.ok;
+  } catch (e) {
+    return false;
+  }
+}
+
+function flagInvalid(inp) {
+  inp.focus(); inp.style.borderColor = '#C4622D';
+  setTimeout(() => inp.style.borderColor = '', 1500);
+}
+
+async function handleContact() {
+  const name   = document.getElementById('contactName').value.trim();
+  const email  = document.getElementById('contactEmail').value.trim();
+  const reason = document.getElementById('contactReason').value;
+  const msg    = document.getElementById('contactMessage').value.trim();
+  const status = document.getElementById('contactStatus');
+  const btn    = document.getElementById('contactBtn');
+
+  if (!email || !email.includes('@')) { flagInvalid(document.getElementById('contactEmail')); return; }
+
+  status.className = 'form-status';
+  btn.disabled = true;
+  btn.innerHTML = '<i class="ti ti-loader-2" aria-hidden="true"></i>Sending…';
+
+  const ok = await submitForm({
+    _subject: `Ulster.food — ${reason === 'story' ? 'I have a food story' : 'General enquiry'}`,
+    form: 'contact',
+    name: name,
+    email: email,
+    reason: reason,
+    message: msg,
+  });
+
+  if (ok) {
+    document.getElementById('contactBody').style.display = 'none';
+    document.getElementById('contactSuccess').style.display = 'block';
+  } else {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="ti ti-send" aria-hidden="true"></i>Send message';
+    status.className = 'form-status error';
+    status.textContent = 'Something went wrong sending your message. Please try again, or reach us on Instagram @ulster.food.';
+  }
 }
 
 // ── NEWSLETTER ────────────────────────────────────────────────────
 function toggleInterest(el) { el.classList.toggle('checked'); }
 
-function handleSubscribe() {
-  const email = document.getElementById('emailInput').value.trim();
-  if (!email || !email.includes('@')) {
-    const inp = document.getElementById('emailInput');
-    inp.focus(); inp.style.borderColor = '#C4622D';
-    setTimeout(() => inp.style.borderColor = '', 1500);
-    return;
+async function handleSubscribe() {
+  const name   = document.getElementById('nameInput').value.trim();
+  const email  = document.getElementById('emailInput').value.trim();
+  const status = document.getElementById('subscribeStatus');
+  const btn    = document.getElementById('subscribeBtn');
+
+  if (!email || !email.includes('@')) { flagInvalid(document.getElementById('emailInput')); return; }
+
+  const interests = [...document.querySelectorAll('.interest-item.checked')]
+    .map(el => el.textContent.trim())
+    .join(', ');
+
+  status.className = 'form-status';
+  btn.disabled = true;
+  btn.innerHTML = '<i class="ti ti-loader-2" aria-hidden="true"></i>Subscribing…';
+
+  const ok = await submitForm({
+    _subject: 'Ulster.food — newsletter signup',
+    form: 'newsletter',
+    name: name,
+    email: email,
+    interests: interests,
+  });
+
+  if (ok) {
+    document.getElementById('signupBody').style.display = 'none';
+    document.getElementById('subscribeSuccess').style.display = 'block';
+  } else {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="ti ti-send" aria-hidden="true"></i>Subscribe — it\'s free';
+    status.className = 'form-status error';
+    status.textContent = 'Something went wrong. Please try again, or reach us on Instagram @ulster.food.';
   }
-  document.getElementById('signupBody').style.display = 'none';
-  document.getElementById('subscribeSuccess').style.display = 'block';
 }
 
 // ── KEYBOARD ──────────────────────────────────────────────────────
