@@ -606,5 +606,78 @@
         "approx": true
       }
     ]
+  },
+  {
+    "id": 18,
+    "name": "Taste Summer in Ards and North Down",
+    "location": {
+      "label": "Ards & North Down (borough-wide)",
+      "lat": 54.5872,
+      "lng": -5.689
+    },
+    "months": [
+      5
+    ],
+    "dates": "17–28 June 2026",
+    "frequency": "annual",
+    "story": "A fortnight-long, borough-wide celebration of summer food across Ards and North Down — tastings, distillery tours, seafood menus, bread-making and markets, with the Comber Earlies Food Festival as its flagship day. The umbrella under which the peninsula's food scene shows off at the height of the season.",
+    "focus": "Borough-wide food experiences, tastings, markets",
+    "linkedProduceIds": [
+      5
+    ],
+    "linkedProducerIds": [
+      7,
+      9
+    ],
+    "url": "https://www.visitardsandnorthdown.com/taste-summer",
+    "tags": [
+      "Ards and North Down",
+      "summer",
+      "umbrella programme"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-06-17",
+        "end": "2026-06-28",
+        "approx": false
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Taste Autumn in Ards and North Down",
+    "location": {
+      "label": "Ards & North Down (borough-wide)",
+      "lat": 54.5872,
+      "lng": -5.689
+    },
+    "months": [
+      8
+    ],
+    "dates": "September (autumn programme — dates TBC)",
+    "frequency": "annual",
+    "story": "The autumn counterpart to Taste Summer — a borough-wide programme of seasonal food events across Ards and North Down as the harvest comes in, anchored around the Tide and Turf seafood festival at Portavogie.",
+    "focus": "Autumn harvest, seafood, seasonal food events",
+    "linkedProduceIds": [
+      10
+    ],
+    "linkedProducerIds": [
+      3
+    ],
+    "url": "https://www.visitardsandnorthdown.com/taste-autumn",
+    "tags": [
+      "Ards and North Down",
+      "autumn",
+      "umbrella programme"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-09-05",
+        "end": "2026-09-20",
+        "approx": true
+      }
+    ]
   }
 ]
