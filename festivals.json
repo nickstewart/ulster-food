@@ -7,16 +7,45 @@
       "lat": 54.4609,
       "lng": -6.0856
     },
-    "months": [4, 5, 6],
+    "months": [
+      4,
+      5,
+      6
+    ],
     "dates": "Saturdays — 30 May, 27 June, 25 July 2026",
     "frequency": "monthly",
     "story": "Three Saturdays each summer in the picturesque Dark Walk at Hillsborough Fort. Over 50 stalls of the finest local and seasonal artisan food — regeneratively farmed meats, fruit and veg, breads, Irish cheeses, smoked salmon, plus street food, music and makers. In its 10th year in 2026. Free to attend, 10am–4pm.",
     "focus": "Artisan food & drink, makers, street food",
     "linkedProduceIds": [],
-    "linkedProducerIds": [5, 25, 26],
+    "linkedProducerIds": [
+      5,
+      25,
+      26
+    ],
     "url": "https://www.visitlisburncastlereagh.com/whats-on/royal-hillsborough-farmers-market-p945431",
-    "tags": ["farmers market", "Hillsborough", "artisan"],
-    "type": "market"
+    "tags": [
+      "farmers market",
+      "Hillsborough",
+      "artisan"
+    ],
+    "type": "market",
+    "occurrences": [
+      {
+        "start": "2026-05-30",
+        "end": "2026-05-30",
+        "approx": false
+      },
+      {
+        "start": "2026-06-27",
+        "end": "2026-06-27",
+        "approx": false
+      },
+      {
+        "start": "2026-07-25",
+        "end": "2026-07-25",
+        "approx": false
+      }
+    ]
   },
   {
     "id": 2,
@@ -26,7 +55,9 @@
       "lat": 54.4854,
       "lng": -6.0633
     },
-    "months": [4],
+    "months": [
+      4
+    ],
     "dates": "13–16 May 2026",
     "frequency": "annual",
     "story": "Northern Ireland's largest annual agri-food event, in its 157th year in 2026. Livestock competitions, show jumping, the NI Food Pavilion showcasing the best of local producers, trade stands, and family attractions. The defining moment of the NI farming calendar.",
@@ -34,8 +65,19 @@
     "linkedProduceIds": [],
     "linkedProducerIds": [],
     "url": "https://balmoralshow.co.uk/",
-    "tags": ["agricultural", "Lisburn", "NI Food Pavilion"],
-    "type": "agriculture"
+    "tags": [
+      "agricultural",
+      "Lisburn",
+      "NI Food Pavilion"
+    ],
+    "type": "agriculture",
+    "occurrences": [
+      {
+        "start": "2026-05-13",
+        "end": "2026-05-16",
+        "approx": false
+      }
+    ]
   },
   {
     "id": 3,
@@ -45,16 +87,34 @@
       "lat": 54.5421,
       "lng": -5.7461
     },
-    "months": [5],
+    "months": [
+      5
+    ],
     "dates": "Saturday 28 June 2026, 11am–5pm",
     "frequency": "annual",
     "story": "The flagship celebration of Comber's PGI-protected new potatoes. Artisan food and drink stalls, vintage tractor display, celebrity chef demos (Anna Haugh in 2026), children's entertainment, traditional bands. Drew 11,000+ visitors in recent years. Free family event.",
     "focus": "PGI Comber Earlies new potatoes",
-    "linkedProduceIds": [5],
-    "linkedProducerIds": [9, 6],
+    "linkedProduceIds": [
+      5
+    ],
+    "linkedProducerIds": [
+      9,
+      6
+    ],
     "url": "https://www.visitardsandnorthdown.com/whats-on/event-highlights/comber-earlies-food-festival",
-    "tags": ["PGI", "Comber", "food festival"],
-    "type": "food"
+    "tags": [
+      "PGI",
+      "Comber",
+      "food festival"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-06-28",
+        "end": "2026-06-28",
+        "approx": false
+      }
+    ]
   },
   {
     "id": 4,
@@ -64,7 +124,9 @@
       "lat": 54.3815,
       "lng": -5.5544
     },
-    "months": [6],
+    "months": [
+      6
+    ],
     "dates": "18–24 July 2026",
     "frequency": "annual",
     "story": "Portaferry's main summer community festival — a full week of events through the village, with food and drink stalls woven through alongside music, family activities and waterfront entertainment.",
@@ -72,8 +134,19 @@
     "linkedProduceIds": [],
     "linkedProducerIds": [],
     "url": "https://www.portaferrygala.com/",
-    "tags": ["Portaferry", "community", "Ards Peninsula"],
-    "type": "food"
+    "tags": [
+      "Portaferry",
+      "community",
+      "Ards Peninsula"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-07-18",
+        "end": "2026-07-24",
+        "approx": false
+      }
+    ]
   },
   {
     "id": 5,
@@ -83,7 +156,9 @@
       "lat": 54.3815,
       "lng": -5.5544
     },
-    "months": [7],
+    "months": [
+      7
+    ],
     "dates": "Early August (1–4 August in 2025)",
     "frequency": "annual",
     "story": "Classic boat and music festival on the Portaferry waterfront. Traditional and historic vessels gather in the lough narrows. Food and drink vendors throughout the four days, alongside live music and waterside performances.",
@@ -91,27 +166,56 @@
     "linkedProduceIds": [],
     "linkedProducerIds": [],
     "url": "https://www.portaferrysailsandsounds.com/",
-    "tags": ["Portaferry", "waterfront", "boats", "music"],
-    "type": "food"
+    "tags": [
+      "Portaferry",
+      "waterfront",
+      "boats",
+      "music"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-08-01",
+        "end": "2026-08-04",
+        "approx": true
+      }
+    ]
   },
   {
     "id": 6,
     "name": "Ould Lammas Fair",
     "location": {
       "label": "Ballycastle, County Antrim",
-      "lat": 55.2010,
+      "lat": 55.201,
       "lng": -6.2376
     },
-    "months": [7],
+    "months": [
+      7
+    ],
     "dates": "Last Monday & Tuesday of August (~31 Aug – 1 Sep 2026)",
     "frequency": "annual",
     "story": "Nearly 400 years old — the oldest fair in Ireland. Famous for dulse (the dried Atlantic seaweed eaten as a snack across Ulster) and yellowman (the bright honeycomb toffee). Traditional horse trading, market stalls, street entertainment and live music fill the town for two full days.",
     "focus": "Dulse, yellowman, traditional horse trading",
     "linkedProduceIds": [],
-    "linkedProducerIds": [24],
+    "linkedProducerIds": [
+      24
+    ],
     "url": "https://www.visitcausewaycoastandglens.com/whats-on/ould-lammas-fair",
-    "tags": ["Ballycastle", "heritage", "dulse", "yellowman", "Antrim"],
-    "type": "heritage"
+    "tags": [
+      "Ballycastle",
+      "heritage",
+      "dulse",
+      "yellowman",
+      "Antrim"
+    ],
+    "type": "heritage",
+    "occurrences": [
+      {
+        "start": "2026-08-31",
+        "end": "2026-09-01",
+        "approx": false
+      }
+    ]
   },
   {
     "id": 7,
@@ -121,7 +225,9 @@
       "lat": 54.3438,
       "lng": -7.6398
     },
-    "months": [7],
+    "months": [
+      7
+    ],
     "dates": "Late August",
     "frequency": "annual",
     "story": "A weekend showcase of Fermanagh's distinctive food culture — pasture-fed beef, freshwater lake fish, farmhouse cheeses and the county's growing distilling scene. The lake country's answer to a food festival.",
@@ -129,8 +235,20 @@
     "linkedProduceIds": [],
     "linkedProducerIds": [],
     "url": "https://www.fermanaghlakelands.com/",
-    "tags": ["Fermanagh", "Enniskillen", "lake fish", "beef"],
-    "type": "food"
+    "tags": [
+      "Fermanagh",
+      "Enniskillen",
+      "lake fish",
+      "beef"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-08-29",
+        "end": "2026-08-30",
+        "approx": true
+      }
+    ]
   },
   {
     "id": 8,
@@ -140,16 +258,34 @@
       "lat": 54.4609,
       "lng": -6.0856
     },
-    "months": [7, 8],
+    "months": [
+      7,
+      8
+    ],
     "dates": "Late August / early September",
     "frequency": "annual",
     "story": "A five-day celebration of the oyster in historic Hillsborough village. Gourmet food market, oyster bars, chef demonstrations, and the famous World Oyster Eating Championship. One of NI's most polished food events — the village transforms.",
     "focus": "Oysters, World Oyster Eating Championship",
-    "linkedProduceIds": [2],
-    "linkedProducerIds": [2],
+    "linkedProduceIds": [
+      2
+    ],
+    "linkedProducerIds": [
+      2
+    ],
     "url": "https://www.facebook.com/HIOFestival",
-    "tags": ["Hillsborough", "oysters", "international"],
-    "type": "food"
+    "tags": [
+      "Hillsborough",
+      "oysters",
+      "international"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-09-02",
+        "end": "2026-09-06",
+        "approx": true
+      }
+    ]
   },
   {
     "id": 9,
@@ -159,16 +295,32 @@
       "lat": 54.4584,
       "lng": -5.4413
     },
-    "months": [8],
+    "months": [
+      8
+    ],
     "dates": "Saturday 12 September 2026",
     "frequency": "annual",
     "story": "Formerly the Portavogie Prawn Festival, broadened to celebrate both the harbour's catch (prawns, white fish) and the surrounding farmland (beef and produce). Free family event at the heart of the working harbour with chef demos and seafood throughout the day.",
     "focus": "Portavogie prawns, seafood and farmland beef",
     "linkedProduceIds": [],
-    "linkedProducerIds": [3],
+    "linkedProducerIds": [
+      3
+    ],
     "url": "https://www.visitardsandnorthdown.com/whats-on/tide-and-turf-portavogie-p799441",
-    "tags": ["Portavogie", "prawns", "PGI", "Ards Peninsula"],
-    "type": "food"
+    "tags": [
+      "Portavogie",
+      "prawns",
+      "PGI",
+      "Ards Peninsula"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-09-12",
+        "end": "2026-09-12",
+        "approx": false
+      }
+    ]
   },
   {
     "id": 10,
@@ -178,16 +330,32 @@
       "lat": 54.3503,
       "lng": -6.6528
     },
-    "months": [8],
+    "months": [
+      8
+    ],
     "dates": "3–6 September 2026",
     "frequency": "annual",
     "story": "Four days celebrating PGI Armagh Bramley Apples, craft cider, apple brandy and the orchard county's wider food culture. 50+ events including the Bramley Banquet, apple-picking tours, woodland suppers, expert-led cider tastings and chef-led dinners.",
     "focus": "PGI Bramley apples, craft cider, apple brandy",
-    "linkedProduceIds": [14],
+    "linkedProduceIds": [
+      14
+    ],
     "linkedProducerIds": [],
     "url": "https://visitarmagh.com/festivals/food-cider/",
-    "tags": ["Armagh", "PGI", "Bramley", "cider"],
-    "type": "food"
+    "tags": [
+      "Armagh",
+      "PGI",
+      "Bramley",
+      "cider"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-09-03",
+        "end": "2026-09-06",
+        "approx": false
+      }
+    ]
   },
   {
     "id": 11,
@@ -197,16 +365,32 @@
       "lat": 54.3946,
       "lng": -5.6537
     },
-    "months": [8],
+    "months": [
+      8
+    ],
     "dates": "September (biennial)",
     "frequency": "biennial",
     "story": "Named for Sir Hans Sloane, born in Killyleagh in 1660 — the man who tasted chocolate-with-milk in Jamaica and brought the idea back to Europe, the seed of what later became Cadbury's. The festival is held at Killyleagh Castle, sponsored by Finnebrogue Artisan, with chocolatiers from across the UK and Ireland alongside the finest NI artisan food producers.",
     "focus": "Chocolate, NI artisan fine food",
     "linkedProduceIds": [],
-    "linkedProducerIds": [10],
+    "linkedProducerIds": [
+      10
+    ],
     "url": "http://www.hanssloane.com/",
-    "tags": ["Killyleagh", "chocolate", "heritage", "Sir Hans Sloane"],
-    "type": "food"
+    "tags": [
+      "Killyleagh",
+      "chocolate",
+      "heritage",
+      "Sir Hans Sloane"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-09-19",
+        "end": "2026-09-20",
+        "approx": true
+      }
+    ]
   },
   {
     "id": 12,
@@ -216,16 +400,34 @@
       "lat": 54.3815,
       "lng": -5.5544
     },
-    "months": [8],
+    "months": [
+      8
+    ],
     "dates": "13–15 September",
     "frequency": "annual",
     "story": "30+ events across three days celebrating the peninsula's history, landscape and food culture. The standout for Ulster.food is the Wild About Foraging event at Kearney — forage, cook and eat with wildlife expert David Thompson and wild chef Celia Spouncer on the Strangford Lough shore. A direct introduction to the foraging story.",
     "focus": "Heritage, foraging, peninsula food culture",
-    "linkedProduceIds": [4, 17, 18],
+    "linkedProduceIds": [
+      4,
+      17,
+      18
+    ],
     "linkedProducerIds": [],
     "url": "https://strangfordlough.org/news/launch-of-portaferry-heritage-fest/",
-    "tags": ["Portaferry", "foraging", "heritage", "Kearney"],
-    "type": "heritage"
+    "tags": [
+      "Portaferry",
+      "foraging",
+      "heritage",
+      "Kearney"
+    ],
+    "type": "heritage",
+    "occurrences": [
+      {
+        "start": "2026-09-13",
+        "end": "2026-09-15",
+        "approx": false
+      }
+    ]
   },
   {
     "id": 13,
@@ -235,16 +437,34 @@
       "lat": 54.3713,
       "lng": -5.5562
     },
-    "months": [9],
+    "months": [
+      9
+    ],
     "dates": "Early to mid October",
     "frequency": "annual",
     "story": "The oyster festival on the lough itself — smaller and more rooted than Hillsborough. Stalls and shucking displays along the Strangford waterfront, plus workshops on sustainable oyster farming and marine ecology. Oysters served come from certified local farms using sustainable methods.",
     "focus": "Strangford Lough oysters, sustainable farming",
-    "linkedProduceIds": [2],
-    "linkedProducerIds": [2],
+    "linkedProduceIds": [
+      2
+    ],
+    "linkedProducerIds": [
+      2
+    ],
     "url": "https://www.visitmournegullionstrangford.com/explore/cities-towns-and-villages/strangford/strangford-lough",
-    "tags": ["Strangford", "oysters", "lough", "sustainable"],
-    "type": "food"
+    "tags": [
+      "Strangford",
+      "oysters",
+      "lough",
+      "sustainable"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-10-09",
+        "end": "2026-10-11",
+        "approx": true
+      }
+    ]
   },
   {
     "id": 14,
@@ -254,7 +474,9 @@
       "lat": 55.2034,
       "lng": -6.5208
     },
-    "months": [9],
+    "months": [
+      9
+    ],
     "dates": "Early October (3–5 October in 2025)",
     "frequency": "annual",
     "story": "Celebrates the village's two great traditions — its wild salmon fishing heritage on the River Bush and the world-famous Bushmills distillery. Three days of pairings, tastings, salmon dishes and whiskey events in and around the village.",
@@ -262,27 +484,56 @@
     "linkedProduceIds": [],
     "linkedProducerIds": [],
     "url": "https://www.visitcausewaycoastandglens.com/whats-on/bushmills-salmon-and-whiskey-festival",
-    "tags": ["Bushmills", "salmon", "whiskey", "Causeway Coast"],
-    "type": "drink"
+    "tags": [
+      "Bushmills",
+      "salmon",
+      "whiskey",
+      "Causeway Coast"
+    ],
+    "type": "drink",
+    "occurrences": [
+      {
+        "start": "2026-10-02",
+        "end": "2026-10-04",
+        "approx": true
+      }
+    ]
   },
   {
     "id": 15,
     "name": "Taste Causeway Spring",
     "location": {
       "label": "Causeway Coast, County Antrim",
-      "lat": 55.2400,
-      "lng": -6.5000
+      "lat": 55.24,
+      "lng": -6.5
     },
-    "months": [3, 4],
+    "months": [
+      3,
+      4
+    ],
     "dates": "Late April – early May",
     "frequency": "annual",
     "story": "Multi-venue festival across the Causeway Coast — whiskey, seaweed, dulse and Atlantic fish all in conversation across several days. The northern counterpart to the rest of the NI food festival calendar.",
     "focus": "Whiskey, dulse, seaweed, Atlantic fish",
     "linkedProduceIds": [],
-    "linkedProducerIds": [24],
+    "linkedProducerIds": [
+      24
+    ],
     "url": "https://www.visitcausewaycoastandglens.com/food-and-drink",
-    "tags": ["Causeway Coast", "whiskey", "dulse", "seaweed"],
-    "type": "food"
+    "tags": [
+      "Causeway Coast",
+      "whiskey",
+      "dulse",
+      "seaweed"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-04-25",
+        "end": "2026-05-03",
+        "approx": true
+      }
+    ]
   },
   {
     "id": 16,
@@ -292,7 +543,10 @@
       "lat": 54.5973,
       "lng": -5.9301
     },
-    "months": [1, 8],
+    "months": [
+      1,
+      8
+    ],
     "dates": "February & September",
     "frequency": "twice yearly",
     "story": "Two restaurant weeks each year — late winter and early autumn. Prix-fixe menus across dozens of Belfast restaurants celebrating the city's strong independent food scene and the producers behind it.",
@@ -300,8 +554,24 @@
     "linkedProduceIds": [],
     "linkedProducerIds": [],
     "url": "https://visitbelfast.com/",
-    "tags": ["Belfast", "restaurant", "citywide"],
-    "type": "food"
+    "tags": [
+      "Belfast",
+      "restaurant",
+      "citywide"
+    ],
+    "type": "food",
+    "occurrences": [
+      {
+        "start": "2026-02-13",
+        "end": "2026-02-22",
+        "approx": true
+      },
+      {
+        "start": "2026-09-11",
+        "end": "2026-09-20",
+        "approx": true
+      }
+    ]
   },
   {
     "id": 17,
@@ -311,7 +581,10 @@
       "lat": 54.5961,
       "lng": -5.9301
     },
-    "months": [10, 11],
+    "months": [
+      10,
+      11
+    ],
     "dates": "Mid-November to late December",
     "frequency": "annual",
     "story": "Six weeks of wooden chalets in the grounds of Belfast City Hall — bratwurst, crêpes, Belgian waffles, paella and mulled wine, alongside a growing presence of Northern Irish artisan producers. The defining Belfast Christmas tradition.",
@@ -319,7 +592,19 @@
     "linkedProduceIds": [],
     "linkedProducerIds": [],
     "url": "https://visitbelfast.com/",
-    "tags": ["Belfast", "Christmas", "market", "winter"],
-    "type": "market"
+    "tags": [
+      "Belfast",
+      "Christmas",
+      "market",
+      "winter"
+    ],
+    "type": "market",
+    "occurrences": [
+      {
+        "start": "2026-11-14",
+        "end": "2026-12-23",
+        "approx": true
+      }
+    ]
   }
 ]

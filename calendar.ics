@@ -11,10 +11,52 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 COLOR:#C4622D
 BEGIN:VEVENT
-UID:festival-1@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260801
+UID:festival-1-0@ulster.food
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260530
+DTEND;VALUE=DATE:20260531
+RRULE:FREQ=YEARLY
+SUMMARY:🎪 Royal Hillsborough Farmers Market
+DESCRIPTION:Three Saturdays each summer in the picturesque Dark Walk at Hil
+ lsborough Fort. Over 50 stalls of the finest local and seasonal artisan fo
+ od — regeneratively farmed meats\, fruit and veg\, breads\, Irish cheeses\
+ , smoked salmon\, plus street food\, music and makers. In its 10th year in
+  2026. Free to attend\, 10am–4pm.\n\nDates: Saturdays — 30 May\, 27 June\,
+  25 July 2026\nFocus: Artisan food & drink\, makers\, street food\nMore in
+ fo: https://www.visitlisburncastlereagh.com/whats-on/royal-hillsborough-fa
+ rmers-market-p945431\n\nFull guide at ulster.food
+LOCATION:Hillsborough Fort\, Hillsborough
+URL:https://www.visitlisburncastlereagh.com/whats-on/royal-hillsborough-far
+ mers-market-p945431
+CATEGORIES:Festival\,Market
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:festival-1-1@ulster.food
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260627
+DTEND;VALUE=DATE:20260628
+RRULE:FREQ=YEARLY
+SUMMARY:🎪 Royal Hillsborough Farmers Market
+DESCRIPTION:Three Saturdays each summer in the picturesque Dark Walk at Hil
+ lsborough Fort. Over 50 stalls of the finest local and seasonal artisan fo
+ od — regeneratively farmed meats\, fruit and veg\, breads\, Irish cheeses\
+ , smoked salmon\, plus street food\, music and makers. In its 10th year in
+  2026. Free to attend\, 10am–4pm.\n\nDates: Saturdays — 30 May\, 27 June\,
+  25 July 2026\nFocus: Artisan food & drink\, makers\, street food\nMore in
+ fo: https://www.visitlisburncastlereagh.com/whats-on/royal-hillsborough-fa
+ rmers-market-p945431\n\nFull guide at ulster.food
+LOCATION:Hillsborough Fort\, Hillsborough
+URL:https://www.visitlisburncastlereagh.com/whats-on/royal-hillsborough-far
+ mers-market-p945431
+CATEGORIES:Festival\,Market
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:festival-1-2@ulster.food
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260725
+DTEND;VALUE=DATE:20260726
 RRULE:FREQ=YEARLY
 SUMMARY:🎪 Royal Hillsborough Farmers Market
 DESCRIPTION:Three Saturdays each summer in the picturesque Dark Walk at Hil
@@ -33,9 +75,9 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-2@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260601
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260513
+DTEND;VALUE=DATE:20260517
 RRULE:FREQ=YEARLY
 SUMMARY:🎪 Balmoral Show
 DESCRIPTION:Northern Ireland's largest annual agri-food event\, in its 157t
@@ -51,9 +93,9 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-3@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260601
-DTEND;VALUE=DATE:20260701
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260628
+DTEND;VALUE=DATE:20260629
 RRULE:FREQ=YEARLY
 SUMMARY:🎪 Comber Earlies Food Festival
 DESCRIPTION:The flagship celebration of Comber's PGI-protected new potatoes
@@ -71,9 +113,9 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-4@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260701
-DTEND;VALUE=DATE:20260801
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260718
+DTEND;VALUE=DATE:20260725
 RRULE:FREQ=YEARLY
 SUMMARY:🎪 Portaferry Gala Festival
 DESCRIPTION:Portaferry's main summer community festival — a full week of ev
@@ -88,17 +130,18 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-5@ulster.food
-DTSTAMP:20260603T162608Z
+DTSTAMP:20260613T163825Z
 DTSTART;VALUE=DATE:20260801
-DTEND;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260805
 RRULE:FREQ=YEARLY
-SUMMARY:🎪 Portaferry Sails & Sounds Festival
+SUMMARY:🎪 Portaferry Sails & Sounds Festival (dates approx)
 DESCRIPTION:Classic boat and music festival on the Portaferry waterfront. T
  raditional and historic vessels gather in the lough narrows. Food and drin
  k vendors throughout the four days\, alongside live music and waterside pe
- rformances.\n\nDates: Early August (1–4 August in 2025)\nFocus: Waterside 
- food vendors\, music\, classic boats\nMore info: https://www.portaferrysai
- lsandsounds.com/\n\nFull guide at ulster.food
+ rformances.\n\nDates: Early August (1–4 August in 2025)\nNote: dates are a
+ pproximate — confirm nearer the time.\nFocus: Waterside food vendors\, mus
+ ic\, classic boats\nMore info: https://www.portaferrysailsandsounds.com/\n
+ \nFull guide at ulster.food
 LOCATION:Portaferry waterfront
 URL:https://www.portaferrysailsandsounds.com/
 CATEGORIES:Festival\,Food
@@ -106,9 +149,9 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-6@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260801
-DTEND;VALUE=DATE:20260901
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260902
 RRULE:FREQ=YEARLY
 SUMMARY:🎪 Ould Lammas Fair
 DESCRIPTION:Nearly 400 years old — the oldest fair in Ireland. Famous for d
@@ -126,16 +169,17 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-7@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260801
-DTEND;VALUE=DATE:20260901
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260831
 RRULE:FREQ=YEARLY
-SUMMARY:🎪 Fermanagh Taste Experience
+SUMMARY:🎪 Fermanagh Taste Experience (dates approx)
 DESCRIPTION:A weekend showcase of Fermanagh's distinctive food culture — pa
  sture-fed beef\, freshwater lake fish\, farmhouse cheeses and the county's
   growing distilling scene. The lake country's answer to a food festival.\n
- \nDates: Late August\nFocus: Beef\, lake fish\, cheese\, distillery\nMore 
- info: https://www.fermanaghlakelands.com/\n\nFull guide at ulster.food
+ \nDates: Late August\nNote: dates are approximate — confirm nearer the tim
+ e.\nFocus: Beef\, lake fish\, cheese\, distillery\nMore info: https://www.
+ fermanaghlakelands.com/\n\nFull guide at ulster.food
 LOCATION:Enniskillen\, County Fermanagh
 URL:https://www.fermanaghlakelands.com/
 CATEGORIES:Festival\,Food
@@ -143,17 +187,18 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-8@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260801
-DTEND;VALUE=DATE:20261001
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260902
+DTEND;VALUE=DATE:20260907
 RRULE:FREQ=YEARLY
-SUMMARY:🎪 Hillsborough International Oyster Festival
+SUMMARY:🎪 Hillsborough International Oyster Festival (dates approx)
 DESCRIPTION:A five-day celebration of the oyster in historic Hillsborough v
  illage. Gourmet food market\, oyster bars\, chef demonstrations\, and the 
  famous World Oyster Eating Championship. One of NI's most polished food ev
- ents — the village transforms.\n\nDates: Late August / early September\nFo
- cus: Oysters\, World Oyster Eating Championship\nMore info: https://www.fa
- cebook.com/HIOFestival\n\nFull guide at ulster.food
+ ents — the village transforms.\n\nDates: Late August / early September\nNo
+ te: dates are approximate — confirm nearer the time.\nFocus: Oysters\, Wor
+ ld Oyster Eating Championship\nMore info: https://www.facebook.com/HIOFest
+ ival\n\nFull guide at ulster.food
 LOCATION:Hillsborough\, County Down
 URL:https://www.facebook.com/HIOFestival
 CATEGORIES:Festival\,Food
@@ -161,9 +206,9 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-9@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20261001
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20260913
 RRULE:FREQ=YEARLY
 SUMMARY:🎪 Tide and Turf Portavogie
 DESCRIPTION:Formerly the Portavogie Prawn Festival\, broadened to celebrate
@@ -181,9 +226,9 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-10@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20261001
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260903
+DTEND;VALUE=DATE:20260907
 RRULE:FREQ=YEARLY
 SUMMARY:🎪 Armagh Food & Cider Weekend
 DESCRIPTION:Four days celebrating PGI Armagh Bramley Apples\, craft cider\,
@@ -199,18 +244,19 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-11@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20261001
-RRULE:FREQ=YEARLY
-SUMMARY:🎪 Hans Sloane Chocolate & Fine Food Festival
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260921
+RRULE:FREQ=YEARLY;INTERVAL=2
+SUMMARY:🎪 Hans Sloane Chocolate & Fine Food Festival (dates approx)
 DESCRIPTION:Named for Sir Hans Sloane\, born in Killyleagh in 1660 — the ma
  n who tasted chocolate-with-milk in Jamaica and brought the idea back to E
  urope\, the seed of what later became Cadbury's. The festival is held at K
  illyleagh Castle\, sponsored by Finnebrogue Artisan\, with chocolatiers fr
  om across the UK and Ireland alongside the finest NI artisan food producer
- s.\n\nDates: September (biennial)\nFocus: Chocolate\, NI artisan fine food
- \nMore info: http://www.hanssloane.com/\n\nFull guide at ulster.food
+ s.\n\nDates: September (biennial)\nNote: dates are approximate — confirm n
+ earer the time.\nFocus: Chocolate\, NI artisan fine food\nMore info: http:
+ //www.hanssloane.com/\n\nFull guide at ulster.food
 LOCATION:Killyleagh Castle\, Killyleagh
 URL:http://www.hanssloane.com/
 CATEGORIES:Festival\,Food
@@ -218,9 +264,9 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-12@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20261001
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260913
+DTEND;VALUE=DATE:20260916
 RRULE:FREQ=YEARLY
 SUMMARY:🎪 Portaferry Heritage Fest
 DESCRIPTION:30+ events across three days celebrating the peninsula's histor
@@ -238,19 +284,19 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-13@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261101
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261012
 RRULE:FREQ=YEARLY
-SUMMARY:🎪 Strangford Lough Oyster Festival
+SUMMARY:🎪 Strangford Lough Oyster Festival (dates approx)
 DESCRIPTION:The oyster festival on the lough itself — smaller and more root
  ed than Hillsborough. Stalls and shucking displays along the Strangford wa
  terfront\, plus workshops on sustainable oyster farming and marine ecology
  . Oysters served come from certified local farms using sustainable methods
- .\n\nDates: Early to mid October\nFocus: Strangford Lough oysters\, sustai
- nable farming\nMore info: https://www.visitmournegullionstrangford.com/exp
- lore/cities-towns-and-villages/strangford/strangford-lough\n\nFull guide a
- t ulster.food
+ .\n\nDates: Early to mid October\nNote: dates are approximate — confirm ne
+ arer the time.\nFocus: Strangford Lough oysters\, sustainable farming\nMor
+ e info: https://www.visitmournegullionstrangford.com/explore/cities-towns-
+ and-villages/strangford/strangford-lough\n\nFull guide at ulster.food
 LOCATION:Strangford village\, County Down
 URL:https://www.visitmournegullionstrangford.com/explore/cities-towns-and-v
  illages/strangford/strangford-lough
@@ -259,18 +305,19 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-14@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261101
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261005
 RRULE:FREQ=YEARLY
-SUMMARY:🎪 Bushmills Salmon & Whiskey Festival
+SUMMARY:🎪 Bushmills Salmon & Whiskey Festival (dates approx)
 DESCRIPTION:Celebrates the village's two great traditions — its wild salmon
   fishing heritage on the River Bush and the world-famous Bushmills distill
  ery. Three days of pairings\, tastings\, salmon dishes and whiskey events 
  in and around the village.\n\nDates: Early October (3–5 October in 2025)\n
- Focus: Wild salmon\, Bushmills whiskey\nMore info: https://www.visitcausew
- aycoastandglens.com/whats-on/bushmills-salmon-and-whiskey-festival\n\nFull
-  guide at ulster.food
+ Note: dates are approximate — confirm nearer the time.\nFocus: Wild salmon
+ \, Bushmills whiskey\nMore info: https://www.visitcausewaycoastandglens.co
+ m/whats-on/bushmills-salmon-and-whiskey-festival\n\nFull guide at ulster.f
+ ood
 LOCATION:Bushmills\, County Antrim
 URL:https://www.visitcausewaycoastandglens.com/whats-on/bushmills-salmon-an
  d-whiskey-festival
@@ -279,51 +326,54 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-15@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260401
-DTEND;VALUE=DATE:20260601
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260425
+DTEND;VALUE=DATE:20260504
 RRULE:FREQ=YEARLY
-SUMMARY:🎪 Taste Causeway Spring
+SUMMARY:🎪 Taste Causeway Spring (dates approx)
 DESCRIPTION:Multi-venue festival across the Causeway Coast — whiskey\, seaw
  eed\, dulse and Atlantic fish all in conversation across several days. The
   northern counterpart to the rest of the NI food festival calendar.\n\nDat
- es: Late April – early May\nFocus: Whiskey\, dulse\, seaweed\, Atlantic fi
- sh\nMore info: https://www.visitcausewaycoastandglens.com/food-and-drink\n
- \nFull guide at ulster.food
+ es: Late April – early May\nNote: dates are approximate — confirm nearer t
+ he time.\nFocus: Whiskey\, dulse\, seaweed\, Atlantic fish\nMore info: htt
+ ps://www.visitcausewaycoastandglens.com/food-and-drink\n\nFull guide at ul
+ ster.food
 LOCATION:Causeway Coast\, County Antrim
 URL:https://www.visitcausewaycoastandglens.com/food-and-drink
 CATEGORIES:Festival\,Food
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:festival-16-r0@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260201
-DTEND;VALUE=DATE:20260301
+UID:festival-16-0@ulster.food
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260213
+DTEND;VALUE=DATE:20260223
 RRULE:FREQ=YEARLY
-SUMMARY:🎪 Belfast Restaurant Week
+SUMMARY:🎪 Belfast Restaurant Week (dates approx)
 DESCRIPTION:Two restaurant weeks each year — late winter and early autumn. 
  Prix-fixe menus across dozens of Belfast restaurants celebrating the city'
  s strong independent food scene and the producers behind it.\n\nDates: Feb
- ruary & September\nFocus: Restaurant scene\, prix-fixe dining\nMore info: 
- https://visitbelfast.com/\n\nFull guide at ulster.food
+ ruary & September\nNote: dates are approximate — confirm nearer the time.\
+ nFocus: Restaurant scene\, prix-fixe dining\nMore info: https://visitbelfa
+ st.com/\n\nFull guide at ulster.food
 LOCATION:Belfast — citywide
 URL:https://visitbelfast.com/
 CATEGORIES:Festival\,Food
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:festival-16-r1@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20261001
+UID:festival-16-1@ulster.food
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260921
 RRULE:FREQ=YEARLY
-SUMMARY:🎪 Belfast Restaurant Week
+SUMMARY:🎪 Belfast Restaurant Week (dates approx)
 DESCRIPTION:Two restaurant weeks each year — late winter and early autumn. 
  Prix-fixe menus across dozens of Belfast restaurants celebrating the city'
  s strong independent food scene and the producers behind it.\n\nDates: Feb
- ruary & September\nFocus: Restaurant scene\, prix-fixe dining\nMore info: 
- https://visitbelfast.com/\n\nFull guide at ulster.food
+ ruary & September\nNote: dates are approximate — confirm nearer the time.\
+ nFocus: Restaurant scene\, prix-fixe dining\nMore info: https://visitbelfa
+ st.com/\n\nFull guide at ulster.food
 LOCATION:Belfast — citywide
 URL:https://visitbelfast.com/
 CATEGORIES:Festival\,Food
@@ -331,17 +381,18 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:festival-17@ulster.food
-DTSTAMP:20260603T162608Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20270101
+DTSTAMP:20260613T163825Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261224
 RRULE:FREQ=YEARLY
-SUMMARY:🎪 Belfast Christmas Continental Market
+SUMMARY:🎪 Belfast Christmas Continental Market (dates approx)
 DESCRIPTION:Six weeks of wooden chalets in the grounds of Belfast City Hall
   — bratwurst\, crêpes\, Belgian waffles\, paella and mulled wine\, alongsi
  de a growing presence of Northern Irish artisan producers. The defining Be
- lfast Christmas tradition.\n\nDates: Mid-November to late December\nFocus:
-  European market food\, NI artisan producers\nMore info: https://visitbelf
- ast.com/\n\nFull guide at ulster.food
+ lfast Christmas tradition.\n\nDates: Mid-November to late December\nNote: 
+ dates are approximate — confirm nearer the time.\nFocus: European market f
+ ood\, NI artisan producers\nMore info: https://visitbelfast.com/\n\nFull g
+ uide at ulster.food
 LOCATION:Belfast City Hall grounds
 URL:https://visitbelfast.com/
 CATEGORIES:Festival\,Market

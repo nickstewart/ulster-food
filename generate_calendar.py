@@ -104,11 +104,11 @@ def escape(text):
     )
 
 
-def make_event(uid, dt_start, dt_end_exclusive, summary, description, location, url, categories):
+def make_event(uid, dt_start, dt_end_exclusive, summary, description, location, url, categories, recurrence="FREQ=YEARLY"):
     """
     Build a single VEVENT block as a list of lines.
     All-day events use DATE values; DTEND is exclusive in iCalendar.
-    Recurs yearly.
+    `recurrence` is an RRULE body (e.g. "FREQ=YEARLY") or None for a one-off.
     """
     lines = [
         "BEGIN:VEVENT",
@@ -116,7 +116,10 @@ def make_event(uid, dt_start, dt_end_exclusive, summary, description, location, 
         f"DTSTAMP:{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}",
         f"DTSTART;VALUE=DATE:{dt_start.strftime('%Y%m%d')}",
         f"DTEND;VALUE=DATE:{dt_end_exclusive.strftime('%Y%m%d')}",
-        "RRULE:FREQ=YEARLY",
+    ]
+    if recurrence:
+        lines.append(f"RRULE:{recurrence}")
+    lines += [
         f"SUMMARY:{escape(summary)}",
         f"DESCRIPTION:{escape(description)}",
     ]
@@ -129,6 +132,12 @@ def make_event(uid, dt_start, dt_end_exclusive, summary, description, location, 
     lines.append("TRANSP:TRANSPARENT")
     lines.append("END:VEVENT")
     return [fold_line(l) for l in lines]
+
+
+def parse_iso(s):
+    """Parse a 'YYYY-MM-DD' string into a date."""
+    y, m, d = (int(x) for x in s.split("-"))
+    return date(y, m, d)
 
 
 def date_for_month(year, month, day=1):
@@ -173,25 +182,30 @@ def main():
     ]
 
     # ── Festivals ────────────────────────────────────────────────────
+    # Events land on their real dates (from each festival's `occurrences`),
+    # not spanning whole months. Recurs yearly so the feed stays populated;
+    # variable-date events are flagged approximate in the description.
     for fest in festivals:
-        ranges = contiguous_ranges(fest["months"])
-        for idx, (start_m, end_m) in enumerate(ranges):
-            dt_start, dt_end = event_dates_for_range(start_m, end_m)
-            summary = f"🎪 {fest['name']}"
-            desc_parts = [
-                fest["story"],
-                "",
-                f"Dates: {fest.get('dates', '')}",
-            ]
+        recurrence = "FREQ=YEARLY;INTERVAL=2" if fest.get("frequency") == "biennial" else "FREQ=YEARLY"
+        occurrences = fest.get("occurrences", [])
+        for idx, oc in enumerate(occurrences):
+            dt_start = parse_iso(oc["start"])
+            dt_end   = parse_iso(oc["end"]) + timedelta(days=1)  # DTEND exclusive
+            approx   = oc.get("approx", False)
+
+            summary = f"🎪 {fest['name']}" + (" (dates approx)" if approx else "")
+            desc_parts = [fest["story"], "", f"Dates: {fest.get('dates', '')}"]
+            if approx:
+                desc_parts.append("Note: dates are approximate — confirm nearer the time.")
             if fest.get("focus"):
                 desc_parts.append(f"Focus: {fest['focus']}")
             if fest.get("url"):
                 desc_parts.append(f"More info: {fest['url']}")
-            desc_parts.append("")
-            desc_parts.append("Full guide at ulster.food")
+            desc_parts += ["", "Full guide at ulster.food"]
             description = "\n".join(desc_parts)
+
             categories = "Festival," + fest.get("type", "food").capitalize()
-            uid_suffix = f"-r{idx}" if len(ranges) > 1 else ""
+            uid_suffix = f"-{idx}" if len(occurrences) > 1 else ""
             out.extend(make_event(
                 uid=f"festival-{fest['id']}{uid_suffix}",
                 dt_start=dt_start,
@@ -201,6 +215,7 @@ def main():
                 location=fest["location"]["label"],
                 url=fest.get("url", "https://ulster.food/#season"),
                 categories=categories,
+                recurrence=recurrence,
             ))
 
     out.append("END:VCALENDAR")
@@ -209,7 +224,7 @@ def main():
     content = "\r\n".join(out) + "\r\n"
     OUT_FILE.write_text(content)
 
-    festival_events = sum(len(contiguous_ranges(f["months"])) for f in festivals)
+    festival_events = sum(len(f.get("occurrences", [])) for f in festivals)
     print(f"Wrote {OUT_FILE.name}: {festival_events} festival events from {len(festivals)} festivals")
 
 
